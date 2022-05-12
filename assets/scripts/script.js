@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const upgradeButton = document.getElementById('upgrade-button');
     const upgradeAmount = document.getElementById('upgrade-amount');
     const upgradePrice = document.getElementById('upgrade-price');
+    const perSecond = document.getElementById('per-second');
 
     mainButton.addEventListener('click', function () {
         score.innerHTML = addScore(score, upgradeAmount);
@@ -23,46 +24,52 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function () {
             if (this.getAttribute('data-unit') === "1") {
                 let currentPeasantAmount = parseInt(document.getElementById('peasant-amount').innerHTML);
-                if(parseInt(score.innerHTML) >= parseInt(peasantPrice.innerHTML)) {
-                score.innerHTML -= parseInt(peasantPrice.innerHTML);
-                peasantPrice.innerHTML = Math.floor(parseInt(peasantPrice.innerHTML) * 1.2);
-                peasantAmount.innerHTML = (currentPeasantAmount + 1);}
-                else {
-                    peasantAmount.innerHTML =currentPeasantAmount;
+                if (parseInt(score.innerHTML) >= parseInt(peasantPrice.innerHTML)) {
+                    score.innerHTML -= parseInt(peasantPrice.innerHTML);
+                    peasantPrice.innerHTML = Math.floor(parseInt(peasantPrice.innerHTML) * 1.8);
+                    peasantAmount.innerHTML = (currentPeasantAmount + 1);
+                } else {
+                    peasantAmount.innerHTML = currentPeasantAmount;
                 }
             } else if (this.getAttribute('data-unit') === "2") {
                 let currentSoldierAmount = parseInt(document.getElementById('soldier-amount').innerHTML);
-                if(parseInt(score.innerHTML) >= parseInt(soldierPrice.innerHTML)) {
+                if (parseInt(score.innerHTML) >= parseInt(soldierPrice.innerHTML)) {
                     score.innerHTML -= parseInt(soldierPrice.innerHTML);
-                    soldierPrice.innerHTML = Math.floor(parseInt(soldierPrice.innerHTML) * 1.2);
-                    soldierAmount.innerHTML = (currentSoldierAmount + 1);}
-                    else {
-                        soldierAmount.innerHTML =currentSoldierAmount;
-                    }
+                    soldierPrice.innerHTML = Math.floor(parseInt(soldierPrice.innerHTML) * 1.5);
+                    soldierAmount.innerHTML = (currentSoldierAmount + 1);
+                } else {
+                    soldierAmount.innerHTML = currentSoldierAmount;
+                }
             } else if (this.getAttribute('data-unit') === "3") {
                 let currentPaladinAmount = parseInt(document.getElementById('paladin-amount').innerHTML);
-                if(parseInt(score.innerHTML) >= parseInt(paladinPrice.innerHTML)) {
+                if (parseInt(score.innerHTML) >= parseInt(paladinPrice.innerHTML)) {
                     score.innerHTML -= parseInt(paladinPrice.innerHTML);
-                    paladinPrice.innerHTML = Math.floor(parseInt(paladinPrice.innerHTML) * 1.2);
-                    paladinAmount.innerHTML = (currentPaladinAmount + 1);}
-                    else {
-                        paladinAmount.innerHTML =currentPaladinAmount;
-                    }
+                    paladinPrice.innerHTML = Math.floor(parseInt(paladinPrice.innerHTML) * 1.3);
+                    paladinAmount.innerHTML = (currentPaladinAmount + 1);
+                } else {
+                    paladinAmount.innerHTML = currentPaladinAmount;
+                }
             }
         });
     }
 
-    upgradeButton.addEventListener('click', function() {
+    upgradeButton.addEventListener('click', function () {
         upgradeAmount.innerHTML = buyUpgrade(upgradeAmount, upgradePrice, score);
     });
 
-    window.setInterval(incrementScore, 1000);
+    window.setInterval(incrementScore, (1000));
+    window.setInterval(updateDPS, (1000/60));
+    
 
     function incrementScore() {
         let currentScore = parseInt(score.innerHTML);
         let totalCurrentScore = parseInt(totalScore.innerHTML);
         score.innerHTML = (currentScore + parseInt(peasantAmount.innerHTML) + parseInt((soldierAmount.innerHTML) * 10) + parseInt((paladinAmount.innerHTML) * 100));
         totalScore.innerHTML = (totalCurrentScore + parseInt(peasantAmount.innerHTML) + parseInt((soldierAmount.innerHTML) * 10) + parseInt((paladinAmount.innerHTML) * 100));
+    }
+
+    function updateDPS() {
+        perSecond.innerHTML =(parseInt(peasantAmount.innerHTML) + parseInt((soldierAmount.innerHTML) * 10) + parseInt((paladinAmount.innerHTML) * 100));
     }
 
 
@@ -82,28 +89,13 @@ function addTotalScore(currentTotalScore, currentUpgradeAmount) {
 
 
 
-//Adds the event listeners to the unit buttons
-function addUnitButtons() {
-    if (this.getAttribute('data-unit') === "1") {
-        let currentUnit1Amount = parseInt(document.getElementById('unit-1-amount').innerHTML);
-        peasantAmount.innerHTML = (currentUnit1Amount + 1);
-    } else if (this.getAttribute('data-unit') === "2") {
-        let currentsoldierAmount = parseInt(document.getElementById('unit-2-amount').innerHTML);
-        soldierAmount.innerHTML = (currentsoldierAmount + 1);
-    } else if (this.getAttribute('data-unit') === "3") {
-        let currentUnit3Amount = parseInt(document.getElementById('unit-3-amount').innerHTML);
-        paladinAmount.innerHTML = (currentUnit3Amount + 1);
-    }
-}
-
 //Function for buying sword upgrades
 function buyUpgrade(currentUpgradeAmount, currentUpgradePrice, currentScore) {
-    if(parseInt(currentScore.innerHTML)>= parseInt(currentUpgradePrice.innerHTML)){
+    if (parseInt(currentScore.innerHTML) >= parseInt(currentUpgradePrice.innerHTML)) {
         currentScore.innerHTML -= parseInt(currentUpgradePrice.innerHTML);
-        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML)* 1.2);
+        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML) * 1.2);
         return (parseInt(currentUpgradeAmount.innerHTML) + 1);
-    }
-    else {
+    } else {
         return (parseInt(currentUpgradeAmount.innerHTML));
     }
-}   
+}
