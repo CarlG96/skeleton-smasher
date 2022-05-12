@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let mainButton = document.getElementById('main-button');
-    let score = document.getElementById('score');
-    let totalScore = document.getElementById('total-score');
-    let upgradeButtons = document.getElementsByClassName('upgrade-button');
-    let upgrade1Amount = document.getElementById('upgrade-1-amount');
-    let upgrade2Amount = document.getElementById('upgrade-2-amount');
-    let upgrade3Amount = document.getElementById('upgrade-3-amount');
-    let upgrade4Amount = document.getElementById('upgrade-4-amount');
-    let upgrade5Amount = document.getElementById('upgrade-5-amount');
+    const mainButton = document.getElementById('main-button');
+    const score = document.getElementById('score');
+    const totalScore = document.getElementById('total-score');
+    const unitButtons = document.getElementsByClassName('unit-button');
+    const unit1Amount = document.getElementById('unit-1-amount');
+    const unit2Amount = document.getElementById('unit-2-amount');
+    const unit3Amount = document.getElementById('unit-3-amount');
+    
 
     mainButton.addEventListener('click', function () {
         let currentScore = parseInt(score.innerHTML);
@@ -15,24 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
         totalScore.innerHTML = (currentScore + 1);
     })
 
-    for (button of upgradeButtons) {
+    for (button of unitButtons) {
         button.addEventListener('click', function () {
-            if (this.getAttribute('data-upgrade') === "1") {
-                let currentUpgrade1Amount = parseInt(document.getElementById('upgrade-1-amount').innerHTML);
-                upgrade1Amount.innerHTML = (currentUpgrade1Amount + 1);
-            } else if (this.getAttribute('data-upgrade') === "2") {
-                let currentUpgrade2Amount = parseInt(document.getElementById('upgrade-2-amount').innerHTML);
-                upgrade2Amount.innerHTML = (currentUpgrade2Amount + 1);
-            } else if (this.getAttribute('data-upgrade') === "3") {
-                let currentUpgrade3Amount = parseInt(document.getElementById('upgrade-3-amount').innerHTML);
-                upgrade3Amount.innerHTML = (currentUpgrade3Amount + 1);
-            } else if (this.getAttribute('data-upgrade') === "4") {
-                let currentUpgrade4Amount = parseInt(document.getElementById('upgrade-4-amount').innerHTML);
-                upgrade4Amount.innerHTML = (currentUpgrade4Amount + 1);
-            } else {
-                let currentUpgrade5Amount = parseInt(document.getElementById('upgrade-5-amount').innerHTML);
-                upgrade5Amount.innerHTML = (currentUpgrade5Amount + 1);
-            }
+            if (this.getAttribute('data-unit') === "1") {
+                let currentUnit1Amount = parseInt(document.getElementById('unit-1-amount').innerHTML);
+                unit1Amount.innerHTML = (currentUnit1Amount + 1);
+            } else if (this.getAttribute('data-unit') === "2") {
+                let currentUnit2Amount = parseInt(document.getElementById('unit-2-amount').innerHTML);
+                unit2Amount.innerHTML = (currentUnit2Amount + 1);
+            } else if (this.getAttribute('data-unit') === "3") {
+                let currentUnit3Amount = parseInt(document.getElementById('unit-3-amount').innerHTML);
+                unit3Amount.innerHTML = (currentUnit3Amount + 1);
+            } 
         })
     }
 
@@ -40,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function incrementScore() {
         let currentScore = parseInt(score.innerHTML);
-        score.innerHTML = (currentScore + parseInt(upgrade1Amount.innerHTML) + parseInt((upgrade2Amount.innerHTML) * 10) + parseInt((upgrade3Amount.innerHTML)*100));
-        totalScore.innerHTML = (currentScore + parseInt(upgrade1Amount.innerHTML) + parseInt((upgrade2Amount.innerHTML) * 10) + parseInt((upgrade3Amount.innerHTML)*100));
+        score.innerHTML = (currentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML)*100));
+        totalScore.innerHTML = (currentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML)*100));
     }
 
     
