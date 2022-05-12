@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const score = document.getElementById('score');
     const totalScore = document.getElementById('total-score');
     const unitButtons = document.getElementsByClassName('unit-button');
-    const unit1Amount = document.getElementById('unit-1-amount');
-    const unit2Amount = document.getElementById('unit-2-amount');
-    const unit3Amount = document.getElementById('unit-3-amount');
+    const peasantAmount = document.getElementById('peasant-amount');
+    const peasantPrice = document.getElementById('peasant-price');
+    const soldierAmount = document.getElementById('soldier-amount');
+    const soldierPrice = document.getElementById('soldier-price');
+    const paladinAmount = document.getElementById('paladin-amount');
+    const paladinPrice = document.getElementById('paladin-price');
     const upgradeButton = document.getElementById('upgrade-button');
     const upgradeAmount = document.getElementById('upgrade-amount');
     const upgradePrice = document.getElementById('upgrade-price');
@@ -19,14 +22,32 @@ document.addEventListener("DOMContentLoaded", function () {
     for (button of unitButtons) {
         button.addEventListener('click', function () {
             if (this.getAttribute('data-unit') === "1") {
-                let currentUnit1Amount = parseInt(document.getElementById('unit-1-amount').innerHTML);
-                unit1Amount.innerHTML = (currentUnit1Amount + 1);
+                let currentPeasantAmount = parseInt(document.getElementById('peasant-amount').innerHTML);
+                if(parseInt(score.innerHTML) >= parseInt(peasantPrice.innerHTML)) {
+                score.innerHTML -= parseInt(peasantPrice.innerHTML);
+                peasantPrice.innerHTML = Math.floor(parseInt(peasantPrice.innerHTML) * 1.2);
+                peasantAmount.innerHTML = (currentPeasantAmount + 1);}
+                else {
+                    peasantAmount.innerHTML =currentPeasantAmount;
+                }
             } else if (this.getAttribute('data-unit') === "2") {
-                let currentUnit2Amount = parseInt(document.getElementById('unit-2-amount').innerHTML);
-                unit2Amount.innerHTML = (currentUnit2Amount + 1);
+                let currentSoldierAmount = parseInt(document.getElementById('soldier-amount').innerHTML);
+                if(parseInt(score.innerHTML) >= parseInt(soldierPrice.innerHTML)) {
+                    score.innerHTML -= parseInt(soldierPrice.innerHTML);
+                    soldierPrice.innerHTML = Math.floor(parseInt(soldierPrice.innerHTML) * 1.2);
+                    soldierAmount.innerHTML = (currentSoldierAmount + 1);}
+                    else {
+                        soldierAmount.innerHTML =currentSoldierAmount;
+                    }
             } else if (this.getAttribute('data-unit') === "3") {
-                let currentUnit3Amount = parseInt(document.getElementById('unit-3-amount').innerHTML);
-                unit3Amount.innerHTML = (currentUnit3Amount + 1);
+                let currentPaladinAmount = parseInt(document.getElementById('paladin-amount').innerHTML);
+                if(parseInt(score.innerHTML) >= parseInt(paladinPrice.innerHTML)) {
+                    score.innerHTML -= parseInt(paladinPrice.innerHTML);
+                    paladinPrice.innerHTML = Math.floor(parseInt(paladinPrice.innerHTML) * 1.2);
+                    paladinAmount.innerHTML = (currentPaladinAmount + 1);}
+                    else {
+                        paladinAmount.innerHTML =currentPaladinAmount;
+                    }
             }
         });
     }
@@ -40,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function incrementScore() {
         let currentScore = parseInt(score.innerHTML);
         let totalCurrentScore = parseInt(totalScore.innerHTML);
-        score.innerHTML = (currentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML) * 100));
-        totalScore.innerHTML = (totalCurrentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML) * 100));
+        score.innerHTML = (currentScore + parseInt(peasantAmount.innerHTML) + parseInt((soldierAmount.innerHTML) * 10) + parseInt((paladinAmount.innerHTML) * 100));
+        totalScore.innerHTML = (totalCurrentScore + parseInt(peasantAmount.innerHTML) + parseInt((soldierAmount.innerHTML) * 10) + parseInt((paladinAmount.innerHTML) * 100));
     }
 
 
@@ -65,13 +86,13 @@ function addTotalScore(currentTotalScore, currentUpgradeAmount) {
 function addUnitButtons() {
     if (this.getAttribute('data-unit') === "1") {
         let currentUnit1Amount = parseInt(document.getElementById('unit-1-amount').innerHTML);
-        unit1Amount.innerHTML = (currentUnit1Amount + 1);
+        peasantAmount.innerHTML = (currentUnit1Amount + 1);
     } else if (this.getAttribute('data-unit') === "2") {
-        let currentUnit2Amount = parseInt(document.getElementById('unit-2-amount').innerHTML);
-        unit2Amount.innerHTML = (currentUnit2Amount + 1);
+        let currentsoldierAmount = parseInt(document.getElementById('unit-2-amount').innerHTML);
+        soldierAmount.innerHTML = (currentsoldierAmount + 1);
     } else if (this.getAttribute('data-unit') === "3") {
         let currentUnit3Amount = parseInt(document.getElementById('unit-3-amount').innerHTML);
-        unit3Amount.innerHTML = (currentUnit3Amount + 1);
+        paladinAmount.innerHTML = (currentUnit3Amount + 1);
     }
 }
 
