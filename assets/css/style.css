@@ -43,3 +43,41 @@ body {
     margin: 0 auto;
     height: 95vh;
 }
+
+.upgrade {
+    height: 25%;
+    color: white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.current-score {
+    height: 100%;
+    color: white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.click-spacer {
+    height: 40%;
+}
+
+.click-button-div {
+    text-align: center;
+}
+
+.click-button {
+    font-size: 500%;
+    border-radius: 50px;
+    color: white;
+    background-color: #532161;
+}
+
+.click-button:hover {
+    color: white;
+    background-color: #6e70a1;
+}
+
+.big-text {
+    font-size: 300%;
+}
