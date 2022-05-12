@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const unit3Amount = document.getElementById('unit-3-amount');
     const upgradeButton = document.getElementById('upgrade-button');
     const upgradeAmount = document.getElementById('upgrade-amount');
+    const upgradePrice = document.getElementById('upgrade-price');
 
     mainButton.addEventListener('click', function () {
-        score.innerHTML = addScore(score);
-        totalScore.innerHTML = addTotalScore(totalScore);
+        score.innerHTML = addScore(score, upgradeAmount);
+        totalScore.innerHTML = addTotalScore(totalScore, upgradeAmount);
     });
 
 
@@ -31,15 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     upgradeButton.addEventListener('click', function() {
-        upgradeAmount.innerHTML = buyUpgrade(upgradeAmount);
+        upgradeAmount.innerHTML = buyUpgrade(upgradeAmount, upgradePrice, score);
     });
 
     window.setInterval(incrementScore, 1000);
 
     function incrementScore() {
         let currentScore = parseInt(score.innerHTML);
+        let totalCurrentScore = parseInt(totalScore.innerHTML);
         score.innerHTML = (currentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML) * 100));
-        totalScore.innerHTML = (currentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML) * 100));
+        totalScore.innerHTML = (totalCurrentScore + parseInt(unit1Amount.innerHTML) + parseInt((unit2Amount.innerHTML) * 10) + parseInt((unit3Amount.innerHTML) * 100));
     }
 
 
@@ -49,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Functions that are called when the button is clicked
 
-function addScore(currentScore) {
-    return (parseInt(currentScore.innerHTML) + 1);
+function addScore(currentScore, currentUpgradeAmount) {
+    return (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML));
 }
 
-function addTotalScore(currentTotalScore) {
-    return (parseInt(currentTotalScore.innerHTML) + 1);
+function addTotalScore(currentTotalScore, currentUpgradeAmount) {
+    return (parseInt(currentTotalScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML));
 }
 
 
@@ -73,7 +75,14 @@ function addUnitButtons() {
     }
 }
 
-//Adds the event listeners to the upgrade button
-function buyUpgrade(currentUpgradeAmount) {
-    return (parseInt(currentUpgradeAmount.innerHTML) + 1);
-}
+//Function for buying sword upgrades
+function buyUpgrade(currentUpgradeAmount, currentUpgradePrice, currentScore) {
+    if(parseInt(currentScore.innerHTML)>= parseInt(currentUpgradePrice.innerHTML)){
+        currentScore.innerHTML -= parseInt(currentUpgradePrice.innerHTML);
+        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML)* 1.2);
+        return (parseInt(currentUpgradeAmount.innerHTML) + 1);
+    }
+    else {
+        return (parseInt(currentUpgradeAmount.innerHTML));
+    }
+}   
