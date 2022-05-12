@@ -5,8 +5,8 @@ body {
 }
 
 .main-heading {
-    background-color: #532161;
-    height: 5vh;
+    background-color: black;
+    height: 10vh;
     width: 100%;
     position: relative;
 }
@@ -18,7 +18,7 @@ body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: #ffffff;
+    color: gold;
     text-decoration: underline;
     font-size: 200%;
 }
@@ -26,50 +26,76 @@ body {
 .right {
     float: right;
     width: 25%;
-    background-color: #6e70a1;
-    height: 95vh;
+    background-color: rgb(88, 87, 87);
+    height: 90vh;
+    border-bottom: 1px solid gold;
+    border-top: 1px solid gold;
 }
 
 .left {
     width: 25%;
-    background-color: #6e70a1;
+    background-color: rgb(88, 87, 87);
     float: left;
-    height: 95vh;
+    height: 90vh;
+    border-bottom: 1px solid gold;
+    border-top: 1px solid gold;
 }
 
 .middle {
     width: 50%;
-    background-color: #be85df;
+    background-color: darkblue;
     margin: 0 auto;
-    height: 95vh;
+    height: 90vh;
+    border-bottom: 1px solid gold;
+    border-top: 1px solid gold;
 }
 
+
 .unit {
-    height: 25%;
-    color: white;
-    border-top: 1px solid white;
+    height: 22.5%;
+    color: gold;
+    border-top: 1px solid gold;
+}
+
+.unit img {
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    overflow: hidden;
 }
 
 .current-score {
     height: 100%;
-    color: white;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
+    color: gold;
 }
 
 .click-spacer {
-    height: 40%;
+    height: 30%;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.click-spacer img {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .click-button-div {
     text-align: center;
+    height: 30%;
 }
 
 .click-button {
-    font-size: 500%;
+    margin: 20px;
+    font-size: 300%;
     border-radius: 50px;
     color: white;
-    background-color: #532161;
+    background-color: black;
+    padding: 25px;
 }
 
 .click-button:hover {
