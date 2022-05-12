@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Skeleton Smasher</title>
 </head>
+
 <body>
     <header>
         <div class="main-heading">
@@ -18,70 +20,76 @@
     <section>
         <!--Score area-->
         <div class="right">
-            <div class ="current-score">
+            <div class="current-score">
                 <span class="big-text">Current Score:</span><span class="big-text" id="score">0</span>
-                <br>
+                <hr>
                 <span class="big-text">Total Score:</span><span class="big-text" id="total-score">0</span>
-                <br>
+                <hr>
                 <span>Skeletons Smashed per second:</span><span id="per-second">0</span>
-                <br>
+                <hr>
                 <span>Number of Peasants:</span><span id="peasant-amount">0</span>
-                <br>
-                <span>Number of Soldiers:</span><span id="soldier-amount">0</span> 
-                <br>
+                <hr>
+                <span>Number of Soldiers:</span><span id="soldier-amount">0</span>
+                <hr>
                 <span>Number of Paladins:</span><span id="paladin-amount">0</span>
-                <br>
-                <span>Sword level:</span><span id="upgrade-amount">1</span>
+                <hr>
+                <span>Sword Level:</span><span id="upgrade-amount">1</span>
             </div>
         </div>
         <!--Buy area-->
         <div class="left">
-            <div class ="unit">
+            <div class="unit">
                 <button class="unit-button" data-unit="1">Buy Peasant</button>
                 <span>Price:</span><span id="peasant-price">30</span>
-                <br>
                 <p>
-                <em>The lowly Peasant doesn't add much to your army. But they are cheap.</em>
-                <span>
-                    Peasants smash one skeleton per second.
-                </span>
-                <img src="assets/images/peasant.png">
-            </p>
+                    <em>The lowly Peasant doesn't add much to your army. But they are cheap.</em>
+                    <span>
+                        Peasants smash one skeleton per second.
+                    </span>
+                </p>
+                <div id="peasant-div">
+                    <img src="assets/images/peasant.png">
+                </div>
             </div>
-            <div class ="unit">
+            <div class="unit">
                 <button class="unit-button" data-unit="2">Buy Soldier</button>
                 <span>Price:</span><span id="soldier-price">500</span>
-                <br>
                 <p>
-                    <em>Each Soldier comes armed with actual weapons and armour. Making them significantly more effective than Peasants (but unfortunately more expensive). </em>
-                <span>Soldiers smash ten skeletons per second.</span>
+                    <em>Each Soldier comes armed with actual weapons and armour. Making them significantly more
+                        effective than Peasants (but unfortunately more expensive). </em>
+                    <span>Soldiers smash ten skeletons per second.</span>
                 </p>
-                <img src="assets/images/soldier.png">
+                <div id="soldier-div">
+                    <img src="assets/images/soldier.png">
+                </div>
             </div>
-            <div class ="unit">
+            <div class="unit">
                 <button class="unit-button" data-unit="3">Buy Paladin</button>
                 <span>Price:</span><span id="paladin-price">2000</span>
-                <br>
                 <p>
                     <em>The Paladin comes ready to destroy any undead in their way.</em>
                     <span>Paladins smash one hundred skeletons per second.</span>
                 </p>
-                <img src="assets/images/paladin.png">
+                <div id="paladin-div">
+                    <img src="assets/images/paladin.png">
+                </div>
             </div>
             <div class="unit">
-                <button id="upgrade-button">Buy Sword Upgrade</button>
+                <button id="upgrade-button"><img src="assets/images/sword.png"></button>
                 <span>Price:</span><span id="upgrade-price">100</span>
-                <br>
-                <p><em>Refine your sword with increasingly expensive materials.</em></p>
+                <p>
+                    <em>Refine your sword with increasingly expensive materials.</em>
+                    <span>Sword upgrades increase your clicking power.</span>
+                </p>
                 <img src="assets/images/sword.png">
             </div>
 
         </div>
         <!--Click area-->
-        <div class ="middle">
+        <div class="middle">
             <div class="click-spacer"><img src="assets/images/skull.png"></div>
             <div class="click-button-div">
-                <button type="button" class ="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button>
+                <button type="button" class="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button>
             </div>
             <div class="click-spacer"><img src="assets/images/skull.png"></div>
         </div>
@@ -89,4 +97,5 @@
 
     <script src="assets/scripts/script.js"></script>
 </body>
+
 </html>
