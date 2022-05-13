@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&display=swap');
+
+body {
+    color: gold;
+    background-color:darkblue;
+    text-align: center;
+    list-style-position: center;
+    font-size: 200%;
+    list-style-position: inside;
+    font-family: 'Macondo', 'sans-serif';
+}
+
+.main-title {
+    font-family: 'Koulen', 'sans-serif';
+}
+
+button {
+    font-size: 200%;
+    background-color: black;
+    color: white;
+    font-family: 'Koulen', 'sans-serif';
+}
+
+button:hover {
+    background-color: #6e70a1;
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 180%;
+        
+    }
+
+    button {
+        font-size: 180%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 160%;
+        
+    }
+
+    button {
+        font-size: 160%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 140%;
+        
+    }
+
+    button {
+        font-size: 140%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        font-size: 100%;
+    }
+
+    button {
+        font-size:100%;
+    }
+}
+
+
+
