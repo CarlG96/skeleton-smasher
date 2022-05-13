@@ -25,63 +25,66 @@
                 <hr>
                 <span class="big-text">Total Score:</span><span class="big-text" id="total-score">0</span>
                 <hr>
-                <span>Skeletons Smashed per second:</span><span id="per-second">0</span>
+                <span class="big-text">Skeletons Smashed per second:</span><span class="big-text" id="per-second">0</span>
                 <hr>
-                <span>Number of Peasants:</span><span id="peasant-amount">0</span>
+                <span class="big-text">Number of Peasants:</span><span class="big-text" id="peasant-amount">0</span>
                 <hr>
-                <span>Number of Soldiers:</span><span id="soldier-amount">0</span>
+                <span class="big-text">Number of Soldiers:</span><span class="big-text" id="soldier-amount">0</span>
                 <hr>
-                <span>Number of Paladins:</span><span id="paladin-amount">0</span>
+                <span class="big-text">Number of Paladins:</span><span class="big-text" id="paladin-amount">0</span>
                 <hr>
-                <span>Sword Level:</span><span id="upgrade-amount">1</span>
+                <span class="big-text">Sword Level:</span><span class="big-text" id="upgrade-amount">1</span>
+            </div>
+            <div>
+                <img src="">
             </div>
         </div>
         <!--Buy area-->
         <div class="left">
-            <div class="unit">
-                <button class="unit-button" data-unit="1">Buy Peasant</button>
-                <span>Price:</span><span id="peasant-price">30</span>
+            <div class="unit" id="peasant-div">
                 <p>
                     <em>The lowly Peasant doesn't add much to your army. But they are cheap.</em>
                     <span>
                         Peasants smash one skeleton per second.
                     </span>
                 </p>
-                <div id="peasant-div">
-                    <img src="assets/images/peasant.png">
+                <button class="unit-button" data-unit="1">Buy Peasant</button>
+                <span>Price:</span><span id="peasant-price">30</span>
+                <div>
+                    <!--<img src="assets/images/peasant.png">-->
                 </div>
             </div>
-            <div class="unit">
-                <button class="unit-button" data-unit="2">Buy Soldier</button>
-                <span>Price:</span><span id="soldier-price">500</span>
+            <div class="unit" id="soldier-div">
                 <p>
-                    <em>Each Soldier comes armed with actual weapons and armour. Making them significantly more
-                        effective than Peasants (but unfortunately more expensive). </em>
+                    <em>Each Soldier comes armed with actual weapons and armour, making them significantly more
+                        effective than Peasants. </em>
                     <span>Soldiers smash ten skeletons per second.</span>
                 </p>
-                <div id="soldier-div">
-                    <img src="assets/images/soldier.png">
+                <button class="unit-button" data-unit="2">Buy Soldier</button>
+                <span>Price:</span><span id="soldier-price">500</span>
+                <div>
+                    <!--<img src="assets/images/soldier.png">-->
                 </div>
             </div>
-            <div class="unit">
-                <button class="unit-button" data-unit="3">Buy Paladin</button>
-                <span>Price:</span><span id="paladin-price">2000</span>
+            <div class="unit" id="paladin-div">
                 <p>
                     <em>The Paladin comes ready to destroy any undead in their way.</em>
                     <span>Paladins smash one hundred skeletons per second.</span>
                 </p>
-                <div id="paladin-div">
-                    <img src="assets/images/paladin.png">
+                <button class="unit-button" data-unit="3">Buy Paladin</button>
+                <span>Price:</span><span id="paladin-price">2000</span>
+                <div>
+                    <!--<img src="assets/images/paladin.png">-->
                 </div>
             </div>
-            <div class="unit">
-                <button id="upgrade-button"><img src="assets/images/sword.png"></button>
-                <span>Price:</span><span id="upgrade-price">100</span>
+            <div class="unit" id="sword-div">
                 <p>
                     <em>Refine your sword with increasingly expensive materials.</em>
                     <span>Sword upgrades increase your clicking power.</span>
                 </p>
-                <img src="assets/images/sword.png">
+                <button id="upgrade-button">Buy Sword Upgrade</button>
+                <span>Price:</span><span id="upgrade-price">100</span>
+                <!--<img src="assets/images/sword.png">-->
             </div>
 
         </div>
