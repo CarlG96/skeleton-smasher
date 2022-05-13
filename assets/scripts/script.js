@@ -13,10 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const upgradeAmount = document.getElementById('upgrade-amount');
     const upgradePrice = document.getElementById('upgrade-price');
     const perSecond = document.getElementById('per-second');
+    const smashAudio = document.getElementById('smash-audio');
+    const buyItemAudio =document.getElementById('buy-item-audio');
+    const screamAudio =document.getElementById('scream-audio');
+    let screamCounter=true;
 
     mainButton.addEventListener('click', function () {
         score.innerHTML = addScore(score, upgradeAmount);
         totalScore.innerHTML = addTotalScore(totalScore, upgradeAmount);
+        if(screamCounter) {
+            screamAudio.play();
+            screamCounter=false;
+        }
+        else {
+            smashAudio.play();
+        }
+        
     });
 
 
@@ -28,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     score.innerHTML -= parseInt(peasantPrice.innerHTML);
                     peasantPrice.innerHTML = Math.floor(parseInt(peasantPrice.innerHTML) * 1.8);
                     peasantAmount.innerHTML = (currentPeasantAmount + 1);
+                    buyItemAudio.play();
                 } else {
                     peasantAmount.innerHTML = currentPeasantAmount;
                 }
@@ -37,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     score.innerHTML -= parseInt(soldierPrice.innerHTML);
                     soldierPrice.innerHTML = Math.floor(parseInt(soldierPrice.innerHTML) * 1.5);
                     soldierAmount.innerHTML = (currentSoldierAmount + 1);
+                    buyItemAudio.play();
                 } else {
                     soldierAmount.innerHTML = currentSoldierAmount;
                 }
@@ -46,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     score.innerHTML -= parseInt(paladinPrice.innerHTML);
                     paladinPrice.innerHTML = Math.floor(parseInt(paladinPrice.innerHTML) * 1.3);
                     paladinAmount.innerHTML = (currentPaladinAmount + 1);
+                    buyItemAudio.play();
                 } else {
                     paladinAmount.innerHTML = currentPaladinAmount;
                 }
@@ -55,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     upgradeButton.addEventListener('click', function () {
         upgradeAmount.innerHTML = buyUpgrade(upgradeAmount, upgradePrice, score);
+        buyItemAudio.play();
     });
 
     window.setInterval(incrementScore, (1000));
@@ -80,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Functions that are called when the button is clicked
 
 function addScore(currentScore, currentUpgradeAmount) {
-    return (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML));
+    return (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML) +5000);
 }
 
 function addTotalScore(currentTotalScore, currentUpgradeAmount) {

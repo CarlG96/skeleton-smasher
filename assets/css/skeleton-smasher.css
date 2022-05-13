@@ -96,33 +96,19 @@ body {
 
 #peasant-div {
     border-top: none;
-    background-image: url(../images/peasant.png); 
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+    
 }
 
 #soldier-div {
-    background-image: url(../images/soldier.png); 
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
 }
 
 
 #paladin-div {
-    background-image: url(../images/paladin.png); 
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+   
 }
 
 #sword-div {
-    background-image: url(../images/sword.png); 
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 50%;
-    background-size: cover;
+    
 }
 
 .current-score {
