@@ -4,22 +4,16 @@ body {
     color: gold;
     background-color:darkblue;
     text-align: center;
-    list-style-position: center;
     font-size: 200%;
-    list-style-position: inside;
-    font-family: 'Macondo', 'sans-serif';
-}
-
-.main-title {
     font-family: 'Koulen', 'sans-serif';
 }
 
-ul {
-    list-style-type: none;
+p {
+    margin: 0;
+    padding: 0;
 }
-
 button {
-    font-size: 200%;
+    font-size: 300%;
     background-color: black;
     color: white;
     font-family: 'Koulen', 'sans-serif';
@@ -29,7 +23,21 @@ button:hover {
     background-color: #6e70a1;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1800px) {
+        
+    button {
+        font-size: 190%;
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 190%;
+        
+    }
+
+}
+@media screen and (max-width: 900px) {
     body {
         font-size: 180%;
         
@@ -39,36 +47,51 @@ button:hover {
         font-size: 180%;
     }
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
     body {
-        font-size: 160%;
+        font-size: 170%;
         
     }
 
     button {
-        font-size: 160%;
+        font-size: 170%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 140%;
+        
+    }
+
+    button {
+        font-size: 140%;
     }
 }
 
 @media screen and (max-width: 500px) {
     body {
-        font-size: 140%;
+        font-size: 130%;
         
     }
 
     button {
-        font-size: 140%;
+        font-size: 130%;
+    }
+
+    ul {
+        position: relative;
+        right: 5vw;
     }
 }
 
 @media screen and (max-width: 350px) {
     body {
-        font-size: 100%;
+        font-size: 90%;
     }
 
     button {
-        font-size:100%;
+        font-size:90%;
     }
 }
 
