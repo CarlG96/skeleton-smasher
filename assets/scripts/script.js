@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Functions that are called when the button is clicked
 
 function addScore(currentScore, currentUpgradeAmount, audio) {
-    currentScore.innerHTML = (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML) + 5000);
+    currentScore.innerHTML = (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML) + 500000);
     audio.play();
 }
 

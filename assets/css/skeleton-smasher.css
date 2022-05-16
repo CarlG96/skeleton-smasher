@@ -69,6 +69,7 @@ body {
 
 .unit p {
     margin: 0;
+    padding-top: 10px;
 }
 
 .unit button {
@@ -76,6 +77,13 @@ body {
     background-color: black;
     color: gold;
     font-size: 200%;
+    height: 15vh;
+    background-image: url('../images/skull.png');
+    background-blend-mode: darken;
+    background-size: 10vh 10vw;
+    background-position: center center;
+
+    width: 15vw;
 }
 
 .unit button:hover {
@@ -156,5 +164,14 @@ body {
 
 .big-text {
     font-size: 300%;
-    
+}
+
+a {
+    text-decoration: underline;
+    color: gold;
+}
+
+.intro-text {
+    font-size: 400%;
+    padding-top: 20%;
 }
