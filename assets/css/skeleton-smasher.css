@@ -85,6 +85,9 @@ body {
     width: 15vw;
 }
 
+.unit-description {
+    font-family: 'Macondo', 'sans-serif';
+}
 #peasant-button {
     background-image: url('../images/peasant.png');
 }
@@ -94,11 +97,12 @@ body {
 }
 
 #paladin-button {
-    background-image: url('../images/paladin.png')
+    background-image: url('../images/paladin.png');
 }
 
 #upgrade-button {
-
+    background-image: url('../images/sword.jpg');
+    
 }
 
 .unit button:hover {
