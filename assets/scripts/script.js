@@ -15,19 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const perSecond = document.getElementById('per-second');
     const smashAudio = document.getElementById('smash-audio');
     const buyItemAudio =document.getElementById('buy-item-audio');
-    const screamAudio =document.getElementById('scream-audio');
-    let screamCounter=true;
 
     mainButton.addEventListener('click', function () {
         score.innerHTML = addScore(score, upgradeAmount);
         totalScore.innerHTML = addTotalScore(totalScore, upgradeAmount);
-        if(screamCounter) {
-            screamAudio.play();
-            screamCounter=false;
-        }
-        else {
-            smashAudio.play();
-        }
+        smashAudio.play();
         
     });
 
