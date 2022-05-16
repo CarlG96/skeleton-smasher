@@ -206,9 +206,19 @@ a {
     }
 
     .price-text {
+        font-size: 140%;
+    }
+
+    .unit button {
         font-size: 150%;
+        height: 10vh;
+    }
+
+    .big-text {
+        font-size: 190%;
     }
 }
+
 
 @media screen and (max-width: 1150px) {
     .intro-text {
@@ -221,9 +231,32 @@ a {
 
     .unit button {
         font-size: 100%;
-        height: 10vh;
+    }
+
+    .big-text {
+        font-size: 185%;
     }
 }
+
+@media screen and (max-width: 1050px) {
+    .middle {
+        width: 33%;
+    }
+
+    .right {
+        width: 33%;
+    }
+
+    .left {
+        width: 33%;
+    }
+
+    .unit button {
+        height: 12vh;
+    }
+}
+
+
 
 @media screen and (max-width: 950px) {
     .intro-text {
@@ -237,18 +270,34 @@ a {
     .unit button {
         width: 12vw;
     }
+
+    .click-button {
+        font-size: 150%;
+        margin: 0;
+    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .intro-text {
         font-size: 120%;
+    }
+
+    .big-text {
+        font-size: 150%;
+    }
+
+    .unit button {
+        height: 10vh;
+    }
+
+    .click-button {
+        padding: 20px;
     }
 }
 
 @media screen and (max-width: 610px) {
     .intro-text {
         font-size: 100%;
-        text-align:end;
     }
     
     .big-text {
@@ -282,12 +331,23 @@ a {
     .main-heading {
         font-size: 80%;
     }
+
+    .middle {
+        width: 33%;
+    }
+
+    .right {
+        width: 33%;
+    }
+
+    .left {
+        width: 33%;
+    }
 }
 
 @media screen and (max-width: 460px) {
     .unit button {
         width: 12vw;
-        height: 7vh;
         font-size: 80%;
         text-align: left;
     }
@@ -304,24 +364,37 @@ a {
 }
 
 @media screen and (max-width: 410px) {
-    .unit-description {
-        font-size: 60%;
-    }
-
     .unit button {
         height: 10vh;
         width: 15vw;
     }
 
-    .price-text {
-        font-size: 70%;
-    }
 }
 
 @media screen and (max-width: 370px) {
     .main-heading {
         font-size: 60%;
     }
+
+    .big-text {
+        font-size: 90%;
+    }
+
+    .unit-description {
+        font-size: 70%;
+    }
+
+    .unit button {
+        width: 17vw;
+        height: 8vh;
+    }
+
+    .click-button {
+        padding: 10px;
+        position: relative;
+        top: 5vh;
+    }
+
 }
 
 
