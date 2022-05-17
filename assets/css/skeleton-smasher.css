@@ -227,6 +227,8 @@ a {
 
     .click-button {
         margin: 0;
+        position: relative;
+        top: 5vh;
     }   
 }
 
@@ -284,13 +286,19 @@ a {
     .click-button {
         font-size: 2vh;
     }
-
+    .unit-description {
+        display: none;
+    }
     .unit button {
-        font-size: 60%;
+        float: none;
+        width: 25vw;
     }
 
     .price-text {
-        font-size: 60%;
+        display: block;
+        float:none;
+        text-align: center;
+        top: 0;
     } 
     
 
@@ -298,33 +306,16 @@ a {
 
 @media screen and (max-width: 410px) {
 
-    .unit-description {
-        display: none;
-    }
-
-    .unit button {
-        float: none;
-    }
-
-    .price-text {
-        display: block;
-        float: none;
-        text-align: center;
-    }
 }
 
 @media screen and (max-width: 370px) {
-    .main-heading {
-        font-size: 60%;
-    }
+   .big-text {
+        font-size: 70%;
+   }
 
-    .big-text {
-        font-size: 80%;
-    }
-
-    .intro-text {
-        font-size: 80%;
-    }
+   .intro-text {
+        font-size: 70%;
+   }
 
 }
 
