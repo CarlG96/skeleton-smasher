@@ -220,7 +220,7 @@ a {
 }
 
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1185px) {
     .intro-text {
         font-size: 200%;
     }
@@ -274,7 +274,9 @@ a {
     .click-button {
         font-size: 150%;
         margin: 0;
-    }
+        position: relative;
+        top: 5vh;
+    }   
 }
 
 @media screen and (max-width: 750px) {
@@ -349,7 +351,7 @@ a {
     .unit button {
         width: 12vw;
         font-size: 80%;
-        text-align: left;
+        text-align: center;
     }
 
     .big-text {
@@ -380,13 +382,17 @@ a {
         font-size: 90%;
     }
 
-    .unit-description {
-        font-size: 70%;
+    .unit button {
+        width: 25vw;
+        height: 12vh;
+        float: none;
+        margin-top: 10px;
     }
 
-    .unit button {
-        width: 17vw;
-        height: 8vh;
+    .price-text {
+        float:none;
+        text-align: center;
+        font-size: 120%;
     }
 
     .click-button {
@@ -394,6 +400,12 @@ a {
         position: relative;
         top: 5vh;
     }
+
+    .unit-description {
+        display: none;
+    }
+
+    
 
 }
 
