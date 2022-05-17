@@ -292,6 +292,7 @@ a {
     .unit button {
         float: none;
         width: 25vw;
+        font-size: 100%;
     }
 
     .price-text {
@@ -299,6 +300,7 @@ a {
         float:none;
         text-align: center;
         top: 0;
+        font-size: 100%;
     } 
     
 
