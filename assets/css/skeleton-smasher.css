@@ -392,7 +392,7 @@ a {
     .price-text {
         float:none;
         text-align: center;
-        font-size: 120%;
+        font-size: 100%;
     }
 
     .click-button {
