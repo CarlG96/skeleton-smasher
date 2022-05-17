@@ -12,9 +12,8 @@ p {
     margin: 0;
     padding: 0;
 }
-button a{
-    font-size: 400%;
-    text-decoration: none;
+button {
+    font-size: 300%;
     background-color: black;
     color: white;
     font-family: 'Koulen', 'sans-serif';
@@ -26,7 +25,7 @@ button:hover {
 
 @media screen and (max-width: 1800px) {
         
-    button a{
+    button {
         font-size: 190%;
     }
     
@@ -44,7 +43,7 @@ button:hover {
         
     }
 
-    button a{
+    button {
         font-size: 180%;
     }
 }
@@ -54,7 +53,7 @@ button:hover {
         
     }
 
-    button a{
+    button {
         font-size: 170%;
     }
 }
@@ -65,7 +64,7 @@ button:hover {
         
     }
 
-    button a{
+    button {
         font-size: 140%;
     }
 }
@@ -76,7 +75,7 @@ button:hover {
         
     }
 
-    button a{
+    button {
         font-size: 130%;
     }
 
@@ -88,7 +87,7 @@ button:hover {
         font-size: 90%;
     }
 
-    button a{
+    button {
         font-size:90%;
     }
 }
