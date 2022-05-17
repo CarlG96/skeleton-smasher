@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&display=swap');
 
+/*Styles for body, paragraphs and buttons*/
+
 body {
-    color: gold;
-    background-color:darkblue;
+    color: #ffd700;
+    background-color: #00008b;
     text-align: center;
     font-size: 200%;
     font-family: 'Koulen', 'sans-serif';
@@ -12,10 +14,11 @@ p {
     margin: 0;
     padding: 0;
 }
+
 button {
     font-size: 300%;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Koulen', 'sans-serif';
 }
 
@@ -23,34 +26,33 @@ button:hover {
     background-color: #6e70a1;
 }
 
+/*Media Queries*/
+
 @media screen and (max-width: 1800px) {
-        
     button {
         font-size: 190%;
     }
-    
 }
+
 @media screen and (max-width: 1000px) {
     body {
         font-size: 190%;
-        
     }
-
 }
+
 @media screen and (max-width: 900px) {
     body {
         font-size: 180%;
-        
     }
 
     button {
         font-size: 180%;
     }
 }
+
 @media screen and (max-width: 760px) {
     body {
         font-size: 170%;
-        
     }
 
     button {
@@ -61,7 +63,6 @@ button:hover {
 @media screen and (max-width: 650px) {
     body {
         font-size: 140%;
-        
     }
 
     button {
@@ -72,14 +73,11 @@ button:hover {
 @media screen and (max-width: 500px) {
     body {
         font-size: 130%;
-        
     }
 
     button {
         font-size: 130%;
     }
-
-    
 }
 
 @media screen and (max-width: 350px) {
@@ -88,9 +86,6 @@ button:hover {
     }
 
     button {
-        font-size:90%;
+        font-size: 90%;
     }
 }
-
-
-

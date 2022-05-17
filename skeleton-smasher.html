@@ -11,8 +11,10 @@
     <title>Skeleton Smasher</title>
 </head>
 <body>
-    <audio id="smash-audio" src="assets/sounds/smash-audio.mp3"></audio>
-    <audio id="buy-item-audio" src="assets/sounds/buy-item-audio.mp3"></audio>
+    <!--Audio elements to play in the game-->
+    <audio id="smash-audio" src="assets/sounds/smash-audio.mp3"></audio> <!--Audio element to play when the main button is clicked-->
+    <audio id="buy-item-audio" src="assets/sounds/buy-item-audio.mp3"></audio> <!--Audio element to play when a unit or upgrade is bought-->
+    <!--Title-->
     <header>
         <div class="main-heading">
             <h1>Skeleton Smasher!</h1>
@@ -22,21 +24,33 @@
         <!--Score area-->
         <div class="right">
             <div class="current-score">
-                <span class="big-text">Current Score:</span><span class="big-text" id="score">0</span>
+                <span class="big-text">Current Score:</span>
+                <span class="big-text" id="score">0</span> <!--Displays current score-->
                 <hr>
-                <span class="big-text">Total Score:</span><span class="big-text" id="total-score">0</span>
+                <span class="big-text">Total Score:</span>
+                <span class="big-text" id="total-score">0</span> <!--Displays total score-->
                 <hr>
-                <span class="big-text">Skeletons Smashed per second:</span><span class="big-text" id="per-second">0</span>
+                <span class="big-text">Skeletons Smashed per second:</span>
+                <span class="big-text" id="per-second">0</span> <!--Displays rate of score increase-->
                 <hr>
-                <span class="big-text">Number of Peasants:</span><span class="big-text" id="peasant-amount">0</span>
+                <span class="big-text">Number of Peasants:</span>
+                <span class="big-text" id="peasant-amount">0</span> <!--Displays number of peasants bought-->
                 <hr>
-                <span class="big-text">Number of Soldiers:</span><span class="big-text" id="soldier-amount">0</span>
+                <span class="big-text">Number of Soldiers:</span>
+                <span class="big-text" id="soldier-amount">0</span> <!--Displays number of soldiers bought-->
                 <hr>
-                <span class="big-text">Number of Paladins:</span><span class="big-text" id="paladin-amount">0</span>
+                <span class="big-text">Number of Paladins:</span>
+                <span class="big-text" id="paladin-amount">0</span> <!--Displays number of paladins bought-->
                 <hr>
-                <span class="big-text">Sword Level:</span><span class="big-text" id="upgrade-amount">1</span>
+                <span class="big-text">Sword Level:</span>
+                <span class="big-text" id="upgrade-amount">1</span> <!--Displays sword upgrade level-->
                 <hr>
-                <a href="index.html"><i class="fa-solid fa-skull intro-text"></i><span class="intro-text">Back to Intro</span><i class="fa-solid fa-skull intro-text"></i></a>
+                <!--Link to index,.html, will remove all scores-->
+                <a href="index.html">
+                    <i class="fa-solid fa-skull intro-text"></i>
+                    <span class="intro-text">Back to Intro</span>
+                    <i class="fa-solid fa-skull intro-text"></i>
+                </a>
             </div>
         </div>
         <!--Buy area-->
@@ -48,30 +62,27 @@
                         Peasants smash one skeleton per second.
                     </span>
                 </p>
-                <button id="peasant-button" class="unit-button" data-unit="1">Buy Peasant</button>
-                <span class="price-text">Price:</span><span class="price-text" id="peasant-price">30</span>
-                <div>
-                </div>
+                <button id="peasant-button" class="unit-button" data-unit="1">Buy Peasant</button> <!--Buys peasant and shows cost-->
+                <span class="price-text">Price:</span>
+                <span class="price-text" id="peasant-price">30</span>
             </div>
             <div class="unit" id="soldier-div">
                 <p class="unit-description">
                     <em>Each Soldier comes armed with better weapons and armour, than Peasants. </em>
                     <span>Soldiers smash ten skeletons per second.</span>
                 </p>
-                <button id="soldier-button" class="unit-button" data-unit="2">Buy Soldier</button>
-                <span class="price-text">Price:</span><span class="price-text" id="soldier-price">500</span>
-                <div>
-                </div>
+                <button id="soldier-button" class="unit-button" data-unit="2">Buy Soldier</button> <!--Buys soldier an shows cost-->
+                <span class="price-text">Price:</span>
+                <span class="price-text" id="soldier-price">500</span>
             </div>
             <div class="unit" id="paladin-div">
                 <p class="unit-description">
                     <em>The Paladin comes ready to destroy any undead in their way.</em>
                     <span>Paladins smash one hundred skeletons per second.</span>
                 </p>
-                <button id="paladin-button" class="unit-button" data-unit="3">Buy Paladin</button>
-                <span class="price-text">Price:</span><span class="price-text"2 id="paladin-price">2000</span>
-                <div>
-                </div>
+                <button id="paladin-button" class="unit-button" data-unit="3">Buy Paladin</button> <!--Buys paladin and shows cost-->
+                <span class="price-text">Price:</span>
+                <span class="price-text" id="paladin-price">2000</span>
             </div>
             <div class="unit" id="sword-div">
                 <p class="unit-description">
@@ -79,20 +90,21 @@
                     <span>Sword upgrades increase your clicking power.</span>
                 </p>
                 <button id="upgrade-button">Buy Sword Upgrade</button>
-                <span class="price-text">Price:</span><span class="price-text" id="upgrade-price">100</span>
+                <span class="price-text">Price:</span>
+                <span class="price-text" id="upgrade-price">100</span>
             </div>
-
         </div>
         <!--Click area-->
         <div class="middle">
             <div class="click-spacer"><img src="assets/images/skull.png" alt="Image of a creepy skull."></div>
             <div class="click-button-div">
-                <button type="button" class="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button>
+                <button type="button" class="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button> <!--Click this button for score-->
             </div>
             <div class="click-spacer"><img src="assets/images/skull.png" alt="Image of a creepy skull."></div>
         </div>
     </section>
 
+    <!--Scripts-->
     <script src="https://kit.fontawesome.com/c080b875b0.js" crossorigin="anonymous"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
