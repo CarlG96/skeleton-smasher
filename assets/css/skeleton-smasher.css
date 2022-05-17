@@ -24,7 +24,7 @@ body {
     transform: translate(-50%, -50%);
     color: #ffd700;
     text-decoration: underline;
-    font-size: 200%;
+    font-size: 3vh;
 }
 
 .right {
@@ -75,7 +75,7 @@ body {
     font-family: 'Koulen', 'sans-serif';
     background-color: #000000;
     color: #ffd700;
-    font-size: 200%;
+    font-size: 3vh;
     height: 15vh;
     background-blend-mode: darken;
     background-size: 10vh 10vw;
@@ -87,6 +87,7 @@ body {
 
 .unit-description {
     font-family: 'Macondo', 'sans-serif';
+    font-size: 1.6vh;
 }
 
 #peasant-button {
@@ -111,11 +112,11 @@ body {
 }
 
 .unit img {
-    height: 100px;
+    height: 15vh;
     image-resolution: 100px 100px;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 15vw;
     overflow: hidden;
     display: block;
     padding-top:25px;
@@ -128,7 +129,7 @@ body {
 }
 
 .price-text {
-    font-size: 200%;
+    font-size: 3vh;
     font-weight: bold;
     position:relative;
     top: 4vh;
@@ -179,7 +180,7 @@ body {
 }
 
 .big-text {
-    font-size: 210%;
+    font-size: 3vh;
 }
 
 a {
@@ -188,54 +189,20 @@ a {
 }
 
 .intro-text {
-    font-size: 400%;
+    font-size: 3vh;
     padding-top: 20%;
 }
 
 /*Media Queries*/
 
-@media screen and (max-width:1870px) {
-    .intro-text {
-        font-size: 300%;
-    }
-}
-
 @media screen and (max-width: 1500px) {
-    .intro-text {
-        font-size: 250%;
-    }
 
-    .price-text {
-        font-size: 140%;
-    }
-
-    .unit button {
-        font-size: 150%;
-        height: 10vh;
-    }
-
-    .big-text {
-        font-size: 190%;
-    }
 }
 
 
 @media screen and (max-width: 1185px) {
-    .intro-text {
-        font-size: 200%;
-    }
 
-    .price-text {
-        font-size: 100%;
-    }
 
-    .unit button {
-        font-size: 100%;
-    }
-
-    .big-text {
-        font-size: 185%;
-    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -251,76 +218,38 @@ a {
         width: 33%;
     }
 
-    .unit button {
-        height: 12vh;
-    }
 }
 
 
 
 @media screen and (max-width: 950px) {
-    .intro-text {
-        font-size: 150%;
-    }
 
-    .big-text {
-        font-size: 180%;
-    }
-
-    .unit button {
-        width: 12vw;
-    }
 
     .click-button {
-        font-size: 150%;
         margin: 0;
-        position: relative;
-        top: 5vh;
     }   
 }
 
 @media screen and (max-width: 750px) {
-    .intro-text {
-        font-size: 120%;
-    }
-
-    .big-text {
-        font-size: 150%;
-    }
-
-    .unit button {
-        height: 10vh;
-    }
 
     .click-button {
         padding: 20px;
     }
+
+    .unit button {
+        font-size: 90%;
+        height: 13vh;
+    }
+
+
+    .price-text {
+        font-size: 90%;
+    }
 }
 
 @media screen and (max-width: 610px) {
-    .intro-text {
-        font-size: 100%;
-    }
     
-    .big-text {
-        font-size: 140%;
-    }
 
-    .unit-description {
-        font-size: 80%;
-    }
-
-    .price-text {
-        display: block;
-        position: static;
-        font-size: 100%;
-    }
-
-    .unit button {
-        height: 10vh;
-        width: 15vw;
-        font-size: 100%;
-    }
 }
 
 @media screen and (max-width: 520px) {
@@ -330,47 +259,58 @@ a {
         padding: 20px;
     }
 
-    .main-heading {
-        font-size: 80%;
-    }
-
-    .middle {
-        width: 33%;
-    }
-
-    .right {
-        width: 33%;
-    }
-
-    .left {
-        width: 33%;
-    }
-}
-
-@media screen and (max-width: 460px) {
-    .unit button {
-        width: 12vw;
-        font-size: 80%;
-        text-align: center;
-    }
-
     .big-text {
-        font-size: 120%;
-        text-align: left;
+        font-size: 90%;
     }
 
     .intro-text {
-        font-size: 95%;
-        text-align:left;
+        font-size: 90%;
     }
+
+    .unit button {
+        font-size: 80%;
+        height: 12vh;
+    }
+
+    .price-text {
+        font-size: 80%;
+    }
+
+}
+
+
+@media screen and (max-width: 460px) {
+
+    .click-button {
+        font-size: 2vh;
+    }
+
+    .unit button {
+        font-size: 60%;
+    }
+
+    .price-text {
+        font-size: 60%;
+    } 
+    
+
 }
 
 @media screen and (max-width: 410px) {
-    .unit button {
-        height: 10vh;
-        width: 15vw;
+
+    .unit-description {
+        display: none;
     }
 
+    .unit button {
+        float: none;
+    }
+
+    .price-text {
+        display: block;
+        float: none;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 370px) {
@@ -379,34 +319,19 @@ a {
     }
 
     .big-text {
-        font-size: 90%;
+        font-size: 80%;
     }
 
-    .unit button {
-        width: 25vw;
-        height: 12vh;
-        float: none;
-        margin-top: 10px;
+    .intro-text {
+        font-size: 80%;
     }
 
-    .price-text {
-        float:none;
-        text-align: center;
-        font-size: 100%;
-    }
+}
 
+@media screen and (max-height: 900px) {
     .click-button {
-        padding: 10px;
-        position: relative;
-        top: 5vh;
+        font-size: 2vh;
     }
-
-    .unit-description {
-        display: none;
-    }
-
-    
-
 }
 
 
