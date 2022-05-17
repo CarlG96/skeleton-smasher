@@ -12,8 +12,9 @@ p {
     margin: 0;
     padding: 0;
 }
-button {
-    font-size: 300%;
+button a{
+    font-size: 400%;
+    text-decoration: none;
     background-color: black;
     color: white;
     font-family: 'Koulen', 'sans-serif';
@@ -25,7 +26,7 @@ button:hover {
 
 @media screen and (max-width: 1800px) {
         
-    button {
+    button a{
         font-size: 190%;
     }
     
@@ -43,7 +44,7 @@ button:hover {
         
     }
 
-    button {
+    button a{
         font-size: 180%;
     }
 }
@@ -53,7 +54,7 @@ button:hover {
         
     }
 
-    button {
+    button a{
         font-size: 170%;
     }
 }
@@ -64,7 +65,7 @@ button:hover {
         
     }
 
-    button {
+    button a{
         font-size: 140%;
     }
 }
@@ -75,14 +76,11 @@ button:hover {
         
     }
 
-    button {
+    button a{
         font-size: 130%;
     }
 
-    ul {
-        position: relative;
-        right: 5vw;
-    }
+    
 }
 
 @media screen and (max-width: 350px) {
@@ -90,7 +88,7 @@ button:hover {
         font-size: 90%;
     }
 
-    button {
+    button a{
         font-size:90%;
     }
 }
