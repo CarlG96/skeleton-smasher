@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const mainButton = document.getElementById('main-button'); //A constant representing the document's click button, the user's main point of interaction to start with.
-    const score = document.getElementById('score'); //A constant representing the document's score value text. Can increase and decrease based on user input.
-    const totalScore = document.getElementById('total-score'); //A constant representing the document's total score value text. Will only ever increase in value.
-    const unitButtons = document.getElementsByClassName('unit-button'); //Constant list of the document's buttons which can be used to purchase units to generate score.
-    const peasantAmount = document.getElementById('peasant-amount'); //Represents the amount of 'Peasant' units bought by the user.
-    const peasantPrice = document.getElementById('peasant-price'); //Represents the amount of score required to purchase next 'Peasant' unit.
-    const soldierAmount = document.getElementById('soldier-amount'); //Represents the amount of 'Soldier' units bought by the user.
-    const soldierPrice = document.getElementById('soldier-price'); // Represents the amount of score required to purchase next 'Soldier' unit.
-    const paladinAmount = document.getElementById('paladin-amount'); // Represents the amount of 'Paladin' units bought by the user.
-    const paladinPrice = document.getElementById('paladin-price'); // Represents the amount of score required to purchase next 'Paladin' unit.
-    const upgradeButton = document.getElementById('upgrade-button'); // Constant representing the button used to purchase the 'Sword Upgrades'.
-    const upgradeAmount = document.getElementById('upgrade-amount'); // Represents the amount of 'Sword Upgrades' bought by the user.
-    const upgradePrice = document.getElementById('upgrade-price'); //Represents the amount of score required to purchase the next 'Sword Upgrade'.
-    const perSecond = document.getElementById('per-second'); //A constant representing the document's 'Skeleton's Smashed Per Second' text.
-    const smashAudio = document.getElementById('smash-audio'); // Audio which is activated when a player clicks the mainButton.
-    const buyItemAudio = document.getElementById('buy-item-audio'); //Audio which is activated when a unit or upgrade is purchased.
+    const mainButton = document.getElementById('main-button'); 
+    const score = document.getElementById('score'); 
+    const totalScore = document.getElementById('total-score'); 
+    const unitButtons = document.getElementsByClassName('unit-button');
+    const peasantAmount = document.getElementById('peasant-amount'); 
+    const peasantPrice = document.getElementById('peasant-price'); 
+    const soldierAmount = document.getElementById('soldier-amount'); 
+    const soldierPrice = document.getElementById('soldier-price'); 
+    const paladinAmount = document.getElementById('paladin-amount'); 
+    const paladinPrice = document.getElementById('paladin-price'); 
+    const upgradeButton = document.getElementById('upgrade-button'); 
+    const upgradeAmount = document.getElementById('upgrade-amount'); 
+    const upgradePrice = document.getElementById('upgrade-price'); 
+    const perSecond = document.getElementById('per-second'); 
+    const smashAudio = document.getElementById('smash-audio'); 
+    const buyItemAudio = document.getElementById('buy-item-audio'); 
 
     //Add event listener to Main Click Button for the user to generate score
     mainButton.addEventListener('click', function () {
@@ -52,8 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Adds to score
 function addScore(currentScore, currentUpgradeAmount, audio) {
     currentScore.innerHTML = (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML));
-    audio.play(); //Plays sound
-}
+    audio.play(); 
 
 //Adds to total score
 function addTotalScore(currentTotalScore, currentUpgradeAmount) {
@@ -66,31 +65,31 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
         let currentPeasantNum = parseInt(peasantNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(peasantCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(peasantCost.innerHTML);
-            peasantCost.innerHTML = Math.floor(parseInt(peasantCost.innerHTML) * 1.8); //Calculates next cost
-            peasantNum.innerHTML = (currentPeasantNum + 1); //Increases number of peasants
-            audio.play(); //Plays audio
+            peasantCost.innerHTML = Math.floor(parseInt(peasantCost.innerHTML) * 1.8); 
+            peasantNum.innerHTML = (currentPeasantNum + 1); 
+            audio.play(); 
         } else {
-            peasantNum.innerHTML = currentPeasantNum; //Keeps number the same if the user doesn't have enough
+            peasantNum.innerHTML = currentPeasantNum; 
         }
     } else if (element.getAttribute('data-unit') === "2") {
         let currentSoldierNum = parseInt(soldierNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(soldierCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(soldierCost.innerHTML);
-            soldierCost.innerHTML = Math.floor(parseInt(soldierCost.innerHTML) * 1.5);  //Calculates next cost
-            soldierNum.innerHTML = (currentSoldierNum + 1); //Increases number of soldiers
-            audio.play(); //Plays audio
+            soldierCost.innerHTML = Math.floor(parseInt(soldierCost.innerHTML) * 1.5); 
+            soldierNum.innerHTML = (currentSoldierNum + 1); 
+            audio.play(); 
         } else {
-            soldierNum.innerHTML = currentSoldierNum; //Keeps number the same if the user doesn't have enough
+            soldierNum.innerHTML = currentSoldierNum; 
         }
     } else if (element.getAttribute('data-unit') === "3") {
         let currentPaladinNum = parseInt(paladinNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(paladinCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(paladinCost.innerHTML);
-            paladinCost.innerHTML = Math.floor(parseInt(paladinCost.innerHTML) * 1.3); //Calculates next cost
-            paladinNum.innerHTML = (currentPaladinNum + 1); //Increases number of paladins
-            audio.play(); //Plays audio
+            paladinCost.innerHTML = Math.floor(parseInt(paladinCost.innerHTML) * 1.3); 
+            paladinNum.innerHTML = (currentPaladinNum + 1); 
+            audio.play(); 
         } else {
-            paladinNum.innerHTML = currentPaladinNum; //Keeps number the same if the user doesn't have enough
+            paladinNum.innerHTML = currentPaladinNum; 
         }
     }
 }
@@ -100,11 +99,11 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
 function buyUpgrade(currentUpgradeAmount, currentUpgradePrice, currentScore, audio) {
     if (parseInt(currentScore.innerHTML) >= parseInt(currentUpgradePrice.innerHTML)) {
         currentScore.innerHTML -= parseInt(currentUpgradePrice.innerHTML);
-        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML) * 1.2); //Calculates next cost
-        currentUpgradeAmount.innerHTML = (parseInt(currentUpgradeAmount.innerHTML) + 1); //Increases upgrade number
-        audio.play(); //Plays audio
+        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML) * 1.2); 
+        currentUpgradeAmount.innerHTML = (parseInt(currentUpgradeAmount.innerHTML) + 1); 
+        audio.play(); 
     } else {
-        currentUpgradeAmount.innerHTML = (parseInt(currentUpgradeAmount.innerHTML)); //Keeps number the same if the user doesn't have enough
+        currentUpgradeAmount.innerHTML = (parseInt(currentUpgradeAmount.innerHTML)); 
     }
 }
 
