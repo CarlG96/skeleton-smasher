@@ -32,11 +32,6 @@ function setUpInteractivity() {
 
     });
 
-    //Add event listener to the 'buy sword upgrade' button
-    /*upgradeButton.addEventListener("click", function () {
-        buyUpgrade(upgradeAmount, upgradePrice, score, buyItemAudio);
-    });*/
-
     //Increments score that units produce every second
     window.setInterval(incrementFunction, (1000));
     function incrementFunction() {
@@ -44,8 +39,8 @@ function setUpInteractivity() {
     } 
 
     //Calculates and displays score produced by units sixty times a second, making it seem instant to the user
-    window.setInterval(updateDPS, (1000 / 60));
-    function updateDPS() {
+    window.setInterval(updatePerSecond, (1000 / 60));
+    function updatePerSecond() {
        skeletonsPerSecond(perSecond, peasantAmount, soldierAmount, paladinAmount);
     }
 };
@@ -65,7 +60,7 @@ function addTotalScore(currentTotalScore, currentUpgradeAmount) {
 
 //Function for buying units and increasing their price
 function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, paladinNum, paladinCost, upgradeNum, upgradeCost, currentScore, audio) {
-    if (element.getAttribute('data-unit') === "1") { 
+    if (element.getAttribute("data-unit") === "1") { 
         let currentPeasantNum = parseInt(peasantNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(peasantCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(peasantCost.innerHTML);
@@ -73,7 +68,7 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
             peasantNum.innerHTML = (currentPeasantNum + 1); 
             audio.play(); 
         } 
-    } else if (element.getAttribute('data-unit') === "2") {
+    } else if (element.getAttribute("data-unit") === "2") {
         let currentSoldierNum = parseInt(soldierNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(soldierCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(soldierCost.innerHTML);
@@ -81,7 +76,7 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
             soldierNum.innerHTML = (currentSoldierNum + 1); 
             audio.play(); 
         } 
-    } else if (element.getAttribute('data-unit') === "3") {
+    } else if (element.getAttribute("data-unit") === "3") {
         let currentPaladinNum = parseInt(paladinNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(paladinCost.innerHTML)) {
             currentScore.innerHTML -= parseInt(paladinCost.innerHTML);
@@ -101,16 +96,6 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
     }
 }
 
-
-//Function for buying sword upgrades
-function buyUpgrade(currentUpgradeAmount, currentUpgradePrice, currentScore, audio) {
-    if (parseInt(currentScore.innerHTML) >= parseInt(currentUpgradePrice.innerHTML)) {
-        currentScore.innerHTML -= parseInt(currentUpgradePrice.innerHTML);
-        currentUpgradePrice.innerHTML = Math.floor(parseInt(currentUpgradePrice.innerHTML) * 1.2);
-        currentUpgradeAmount.innerHTML = (parseInt(currentUpgradeAmount.innerHTML) + 1); 
-        audio.play(); 
-    } 
-}
 
 //Function for incrementing score when units are purchased
 function incrementScore(currentScore, currentTotalScore, peasantNum, soldierNum, paladinNum) {
