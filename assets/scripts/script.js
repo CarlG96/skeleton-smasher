@@ -10,8 +10,7 @@ function setUpInteractivity() {
     let soldierAmount = document.getElementById('soldier-amount'); 
     let soldierPrice = document.getElementById('soldier-price'); 
     let paladinAmount = document.getElementById('paladin-amount'); 
-    let paladinPrice = document.getElementById('paladin-price'); 
-    let upgradeButton = document.getElementById('upgrade-button'); 
+    let paladinPrice = document.getElementById('paladin-price');  
     let upgradeAmount = document.getElementById('upgrade-amount'); 
     let upgradePrice = document.getElementById('upgrade-price'); 
     let perSecond = document.getElementById('per-second'); 
@@ -29,13 +28,12 @@ function setUpInteractivity() {
         button.addEventListener("click", function () {
             addUnit(this, peasantAmount, peasantPrice, soldierAmount, soldierPrice, paladinAmount, paladinPrice, upgradeAmount, upgradePrice, score, buyItemAudio);
         });
-
     });
 
     //Increments score that units produce every second
     window.setInterval(incrementFunction, (1000));
     function incrementFunction() {
-        incrementScore(score, totalScore, peasantAmount, soldierAmount, paladinAmount);
+        incrementScore();
     } 
 
     //Calculates and displays score produced by units sixty times a second, making it seem instant to the user
@@ -96,11 +94,17 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
     }
 }
 
-
 //Function for incrementing score when units are purchased
-function incrementScore(currentScore, currentTotalScore, peasantNum, soldierNum, paladinNum) {
-    currentScore.innerHTML = parseInt(currentScore.innerHTML) + parseInt(peasantNum.innerHTML) + parseInt((soldierNum.innerHTML) * 10) + parseInt((paladinNum.innerHTML) * 100);
-    currentTotalScore.innerHTML = parseInt(currentTotalScore.innerHTML) + parseInt(peasantNum.innerHTML) + parseInt((soldierNum.innerHTML) * 10) + parseInt((paladinNum.innerHTML) * 100);
+function incrementScore() {
+    newScore =document.getElementById("score");
+    newTotalScore =document.getElementById("total-score");
+    score= parseInt(document.getElementById("score").innerHTML);
+    totalScore= parseInt(document.getElementById("total-score").innerHTML);
+    peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
+    soldierNum =parseInt(document.getElementById("soldier-amount").innerHTML);
+    paladinNum =parseInt(document.getElementById("paladin-amount").innerHTML);
+    newScore.innerHTML =((score) + (peasantNum) +(soldierNum * 10) + (paladinNum * 100));
+    newTotalScore.innerHTML = ((totalScore) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
 }
 
 //Function for calculating 'Skeletons Smashed per Second'
