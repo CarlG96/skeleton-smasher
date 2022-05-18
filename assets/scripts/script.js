@@ -1,26 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const mainButton = document.getElementById('main-button'); 
-    const score = document.getElementById('score'); 
-    const totalScore = document.getElementById('total-score'); 
-    const unitButtons = Array.from(document.getElementsByClassName('unit-button'));
-    const peasantAmount = document.getElementById('peasant-amount'); 
-    const peasantPrice = document.getElementById('peasant-price'); 
-    const soldierAmount = document.getElementById('soldier-amount'); 
-    const soldierPrice = document.getElementById('soldier-price'); 
-    const paladinAmount = document.getElementById('paladin-amount'); 
-    const paladinPrice = document.getElementById('paladin-price'); 
-    const upgradeButton = document.getElementById('upgrade-button'); 
-    const upgradeAmount = document.getElementById('upgrade-amount'); 
-    const upgradePrice = document.getElementById('upgrade-price'); 
-    const perSecond = document.getElementById('per-second'); 
-    const smashAudio = document.getElementById('smash-audio'); 
-    const buyItemAudio = document.getElementById('buy-item-audio'); 
+    let mainButton = document.getElementById('main-button'); 
+    let score = document.getElementById('score'); 
+    let totalScore = document.getElementById('total-score'); 
+    let unitButtons = Array.from(document.getElementsByClassName('unit-button'));
+    let peasantAmount = document.getElementById('peasant-amount'); 
+    let peasantPrice = document.getElementById('peasant-price'); 
+    let soldierAmount = document.getElementById('soldier-amount'); 
+    let soldierPrice = document.getElementById('soldier-price'); 
+    let paladinAmount = document.getElementById('paladin-amount'); 
+    let paladinPrice = document.getElementById('paladin-price'); 
+    let upgradeButton = document.getElementById('upgrade-button'); 
+    let upgradeAmount = document.getElementById('upgrade-amount'); 
+    let upgradePrice = document.getElementById('upgrade-price'); 
+    let perSecond = document.getElementById('per-second'); 
+    let smashAudio = document.getElementById('smash-audio'); 
+    let buyItemAudio = document.getElementById('buy-item-audio'); 
 
-    const myNumbers =[1,2,3];
 
-    myNumbers.forEach(function(myNumber) {
-        console.log(myNumber);
-    })
 
     //Add event listener to Main Click Button for the user to generate score
     mainButton.addEventListener('click', function () {
