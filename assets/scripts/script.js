@@ -31,10 +31,7 @@ function setUpInteractivity() {
     });
 
     //Increments score that units produce every second
-    window.setInterval(incrementFunction, (1000));
-    function incrementFunction() {
-        incrementScore();
-    } 
+    window.setInterval(incrementScore, (1000));
 
     //Calculates and displays score produced by units sixty times a second, making it seem instant to the user
     window.setInterval(updatePerSecond, (1000 / 60));
