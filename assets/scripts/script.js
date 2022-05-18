@@ -19,8 +19,8 @@ function setUpInteractivity() {
 
     //Add event listener to Main Click Button for the user to generate score
     mainButton.addEventListener("click", function () {
-        addScore(score, upgradeAmount, smashAudio); 
-        addTotalScore(totalScore, upgradeAmount); 
+        addScore(); 
+        addTotalScore(); 
     }); 
 
     //Add event listener to the 'buy X unit' buttons
@@ -41,14 +41,19 @@ function setUpInteractivity() {
 //Functions that are called when the button is clicked
 
 //Adds to score
-function addScore(currentScore, currentUpgradeAmount, audio) {
-    currentScore.innerHTML = (parseInt(currentScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML) +500000);
+function addScore() {
+    let score = document.getElementById("score");
+    let upgradeAmount = document.getElementById("upgrade-amount");
+    let audio = document.getElementById("smash-audio");
+    score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) +500000);
     audio.play(); 
 }
 
 //Adds to total score
-function addTotalScore(currentTotalScore, currentUpgradeAmount) {
-    currentTotalScore.innerHTML = (parseInt(currentTotalScore.innerHTML) + parseInt(currentUpgradeAmount.innerHTML));
+function addTotalScore() {
+    let totalScore = document.getElementById("total-score");
+    let upgradeAmount = document.getElementById("upgrade-amount");
+    totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML));
 }
 
 //Function for buying units and increasing their price
