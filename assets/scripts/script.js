@@ -96,15 +96,15 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
 
 //Function for incrementing score when units are purchased
 function incrementScore() {
-    newScore =document.getElementById("score");
-    newTotalScore =document.getElementById("total-score");
-    score= parseInt(document.getElementById("score").innerHTML);
-    totalScore= parseInt(document.getElementById("total-score").innerHTML);
+    score =document.getElementById("score");
+    totalScore =document.getElementById("total-score");
+    scoreNum= parseInt(document.getElementById("score").innerHTML);
+    totalScoreNum= parseInt(document.getElementById("total-score").innerHTML);
     peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
     soldierNum =parseInt(document.getElementById("soldier-amount").innerHTML);
     paladinNum =parseInt(document.getElementById("paladin-amount").innerHTML);
-    newScore.innerHTML =((score) + (peasantNum) +(soldierNum * 10) + (paladinNum * 100));
-    newTotalScore.innerHTML = ((totalScore) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
+    score.innerHTML =((scoreNum) + (peasantNum) +(soldierNum * 10) + (paladinNum * 100));
+    totalScore.innerHTML = ((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
 }
 
 //Function for calculating 'Skeletons Smashed per Second'
