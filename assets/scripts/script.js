@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", setUpInteractivity);
 
+/**
+ * Function which sets up the event listeners and 
+ * interval events for the site.
+ */
+
 function setUpInteractivity() {
     //Add event listener to Main Click Button for the user to generate score
     let mainButton = document.getElementById('main-button');
@@ -8,7 +13,7 @@ function setUpInteractivity() {
         addTotalScore();
     });
 
-    //Add event listener to the 'buy X unit' buttons
+    //Add event listener to the 'buy X unit or buy X upgrade' buttons
     let unitButtons = Array.from(document.getElementsByClassName('unit-button'));
     unitButtons.forEach(function (button) {
         button.addEventListener("click", function () {
@@ -25,7 +30,11 @@ function setUpInteractivity() {
 
 //Functions that are called when the button is clicked
 
-//Adds to score
+/**
+ * This function adds to score
+ * when the main button is clicked.
+ */
+
 function addScore() {
     let score = document.getElementById("score");
     let upgradeAmount = document.getElementById("upgrade-amount");
@@ -34,14 +43,24 @@ function addScore() {
     audio.play();
 }
 
-//Adds to total score
+/**
+ * This function adds to total score
+ * when the main button is clicked.
+ */
+
 function addTotalScore() {
     let totalScore = document.getElementById("total-score");
     let upgradeAmount = document.getElementById("upgrade-amount");
     totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML));
 }
 
-//Function for deciding on which unit is being represented and which arguments to use
+/**
+ * This function receives an element from unitButtons and figures out 
+ * which unit is being added to.
+ * @param element The button from the array unitButtons being passed in
+ * to check which unit/ upgrade it corresponds with.
+ */
+
 function addUnit(element) {
     if (element.getAttribute("data-unit") === "1") {
         let peasantPrice = document.getElementById("peasant-price");
@@ -62,7 +81,16 @@ function addUnit(element) {
     }
 }
 
-//Function for buying units, increasing number and increasing price
+/**
+ * This function recieves unitAmount, unitPrice and factor
+ * from addUnit() and adds to and increases the price of whatever unit or
+ * upgrade is given to it.
+ * @param unitAmount A number which represents how many of that unit/upgrade 
+ * the user currently has.
+ * @param unitPrice The amount of score required to purchase a unit/upgrade.
+ * @param factor The factor that the unitPrice is multiplied by.
+ */
+
 function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
     let score = document.getElementById("score");
     let audio = document.getElementById("buy-item-audio");
@@ -74,7 +102,10 @@ function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
     }
 }
 
-//Function for incrementing score when units are purchased
+/**
+ * This function increments the score every second.
+ */
+
 function incrementScore() {
     let score = document.getElementById("score");
     let totalScore = document.getElementById("total-score");
@@ -87,7 +118,11 @@ function incrementScore() {
     totalScore.innerHTML = ((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
 }
 
-//Function for calculating 'Skeletons Smashed per Second'
+/**
+ * This function calculates the 'skeletons smashed per
+ * second' and displays it to the user.
+ */
+
 function skeletonsPerSecond() {
     let smashedPerSecond = document.getElementById("per-second");
     let peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
