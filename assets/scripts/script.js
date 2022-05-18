@@ -34,10 +34,8 @@ function setUpInteractivity() {
     window.setInterval(incrementScore, (1000));
 
     //Calculates and displays score produced by units sixty times a second, making it seem instant to the user
-    window.setInterval(updatePerSecond, (1000 / 60));
-    function updatePerSecond() {
-       skeletonsPerSecond(perSecond, peasantAmount, soldierAmount, paladinAmount);
-    }
+    window.setInterval(skeletonsPerSecond, (1000 / 60));
+   
 };
 
 //Functions that are called when the button is clicked
@@ -105,6 +103,10 @@ function incrementScore() {
 }
 
 //Function for calculating 'Skeletons Smashed per Second'
-function skeletonsPerSecond(smashedPerSecond, peasantNum, soldierNum, paladinNum){
-    smashedPerSecond.innerHTML = (parseInt(peasantNum.innerHTML) + parseInt((soldierNum.innerHTML) * 10) + parseInt((paladinNum.innerHTML) * 100));
+function skeletonsPerSecond(){
+    smashedPerSecond = document.getElementById("per-second");
+    peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
+    soldierNum =parseInt(document.getElementById("soldier-amount").innerHTML);
+    paladinNum =parseInt(document.getElementById("paladin-amount").innerHTML);
+    smashedPerSecond.innerHTML = ((peasantNum) + (soldierNum) * 10) + (paladinNum * 100);
 }
