@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", setUpInteractivity);
+
+function setUpInteractivity() {
     let mainButton = document.getElementById('main-button'); 
     let score = document.getElementById('score'); 
     let totalScore = document.getElementById('total-score'); 
@@ -16,26 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
     let smashAudio = document.getElementById('smash-audio'); 
     let buyItemAudio = document.getElementById('buy-item-audio'); 
 
-
-
     //Add event listener to Main Click Button for the user to generate score
-    mainButton.addEventListener('click', function () {
+    mainButton.addEventListener("click", function () {
         addScore(score, upgradeAmount, smashAudio); 
         addTotalScore(totalScore, upgradeAmount); 
     }); 
 
     //Add event listener to the 'buy X unit' buttons
     unitButtons.forEach(function(button) {
-        button.addEventListener('click', function () {
-            addUnit(this, peasantAmount, peasantPrice, soldierAmount, soldierPrice, paladinAmount, paladinPrice, score, buyItemAudio);
+        button.addEventListener("click", function () {
+            addUnit(this, peasantAmount, peasantPrice, soldierAmount, soldierPrice, paladinAmount, paladinPrice, upgradeAmount, upgradePrice, score, buyItemAudio);
         });
 
     });
 
     //Add event listener to the 'buy sword upgrade' button
-    upgradeButton.addEventListener('click', function () {
+    /*upgradeButton.addEventListener("click", function () {
         buyUpgrade(upgradeAmount, upgradePrice, score, buyItemAudio);
-    }); 
+    });*/
 
     //Increments score that units produce every second
     window.setInterval(incrementFunction, (1000));
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateDPS() {
        skeletonsPerSecond(perSecond, peasantAmount, soldierAmount, paladinAmount);
     }
-});
+};
 
 //Functions that are called when the button is clicked
 
@@ -64,7 +64,7 @@ function addTotalScore(currentTotalScore, currentUpgradeAmount) {
 }
 
 //Function for buying units and increasing their price
-function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, paladinNum, paladinCost, currentScore, audio) {
+function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, paladinNum, paladinCost, upgradeNum, upgradeCost, currentScore, audio) {
     if (element.getAttribute('data-unit') === "1") { 
         let currentPeasantNum = parseInt(peasantNum.innerHTML);
         if (parseInt(currentScore.innerHTML) >= parseInt(peasantCost.innerHTML)) {
@@ -89,6 +89,15 @@ function addUnit(element, peasantNum, peasantCost, soldierNum, soldierCost, pala
             paladinNum.innerHTML = (currentPaladinNum + 1); 
             audio.play(); 
         } 
+    } else if (element.getAttribute("data-unit") === "4") {
+        let currentUpgradeNum = parseInt(upgradeNum.innerHTML);
+        if(parseInt(currentScore.innerHTML) >= parseInt(upgradeCost.innerHTML)) {
+            currentScore.innerHTML -= parseInt(upgradeCost.innerHTML);
+            upgradeCost.innerHTML =Math.floor(parseInt(upgradeCost.innerHTML) * 1.2);
+            upgradeNum.innerHTML =(currentUpgradeNum + 1);
+            audio.play();
+        }
+
     }
 }
 
