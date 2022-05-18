@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", setUpInteractivity);
 
 function setUpInteractivity() {
-    let mainButton = document.getElementById('main-button');
-    let unitButtons = Array.from(document.getElementsByClassName('unit-button'));
     //Add event listener to Main Click Button for the user to generate score
+    let mainButton = document.getElementById('main-button');
     mainButton.addEventListener("click", function () {
         addScore();
         addTotalScore();
     });
 
     //Add event listener to the 'buy X unit' buttons
+    let unitButtons = Array.from(document.getElementsByClassName('unit-button'));
     unitButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             addUnit(this);
@@ -21,7 +21,7 @@ function setUpInteractivity() {
 
     //Calculates and displays score produced by units sixty times a second, making it seem instant to the user
     window.setInterval(skeletonsPerSecond, (1000 / 60));
-};
+}
 
 //Functions that are called when the button is clicked
 
@@ -45,7 +45,7 @@ function addTotalScore() {
 function addUnit(element) {
     if (element.getAttribute("data-unit") === "1") {
         let peasantPrice = document.getElementById("peasant-price");
-        let peasantAmount = document.getElementById("peasant-amount")
+        let peasantAmount = document.getElementById("peasant-amount");
         increaseUnitAndPrice(peasantAmount, peasantPrice, 1.5);
     } else if (element.getAttribute("data-unit") === "2") {
         let soldierPrice = document.getElementById("soldier-price");
@@ -62,7 +62,6 @@ function addUnit(element) {
     }
 }
 
-
 //Function for buying units, increasing number and increasing price
 function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
     let score = document.getElementById("score");
@@ -77,22 +76,22 @@ function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
 
 //Function for incrementing score when units are purchased
 function incrementScore() {
-    score = document.getElementById("score");
-    totalScore = document.getElementById("total-score");
-    scoreNum = parseInt(document.getElementById("score").innerHTML);
-    totalScoreNum = parseInt(document.getElementById("total-score").innerHTML);
-    peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
-    soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
-    paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
+    let score = document.getElementById("score");
+    let totalScore = document.getElementById("total-score");
+    let scoreNum = parseInt(document.getElementById("score").innerHTML);
+    let totalScoreNum = parseInt(document.getElementById("total-score").innerHTML);
+    let peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
+    let soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
+    let paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
     score.innerHTML = ((scoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
     totalScore.innerHTML = ((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
 }
 
 //Function for calculating 'Skeletons Smashed per Second'
 function skeletonsPerSecond() {
-    smashedPerSecond = document.getElementById("per-second");
-    peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
-    soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
-    paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
+    let smashedPerSecond = document.getElementById("per-second");
+    let peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
+    let soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
+    let paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
     smashedPerSecond.innerHTML = ((peasantNum) + (soldierNum) * 10) + (paladinNum * 100);
 }
