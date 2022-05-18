@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainButton = document.getElementById('main-button'); 
     const score = document.getElementById('score'); 
     const totalScore = document.getElementById('total-score'); 
-    const unitButtons = document.getElementsByClassName('unit-button');
+    const unitButtons = Array.from(document.getElementsByClassName('unit-button'));
     const peasantAmount = document.getElementById('peasant-amount'); 
     const peasantPrice = document.getElementById('peasant-price'); 
     const soldierAmount = document.getElementById('soldier-amount'); 
@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const smashAudio = document.getElementById('smash-audio'); 
     const buyItemAudio = document.getElementById('buy-item-audio'); 
 
+    const myNumbers =[1,2,3];
+
+    myNumbers.forEach(function(myNumber) {
+        console.log(myNumber);
+    })
+
     //Add event listener to Main Click Button for the user to generate score
     mainButton.addEventListener('click', function () {
         addScore(score, upgradeAmount, smashAudio); 
@@ -23,11 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }); 
 
     //Add event listener to the 'buy X unit' buttons
-    for(let button of unitButtons) {
+    unitButtons.forEach(function(button) {
         button.addEventListener('click', function () {
             addUnit(this, peasantAmount, peasantPrice, soldierAmount, soldierPrice, paladinAmount, paladinPrice, score, buyItemAudio);
         });
-    }
+
+    });
 
     //Add event listener to the 'buy sword upgrade' button
     upgradeButton.addEventListener('click', function () {
