@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", setUpInteractivity);
 
 function setUpInteractivity() {
     //Add event listener to Main Click Button for the user to generate score
-    let mainButton = document.getElementById('main-button');
+    let mainButton = document.getElementById("main-button");
     mainButton.addEventListener("click", function () {
         addScore();
         addTotalScore();
     });
 
     //Add event listener to the 'buy X unit or buy X upgrade' buttons
-    let unitButtons = Array.from(document.getElementsByClassName('unit-button'));
+    let unitButtons = Array.from(document.getElementsByClassName("unit-button"));
     unitButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             addUnit(this);
