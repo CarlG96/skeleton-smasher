@@ -5,7 +5,7 @@ body {
     padding: 0;
     border: 0;
     background-color: #000000;
-    font-family: 'Koulen', 'sans-serif';
+    font-family: 'Macondo', 'sans-serif';
 }
 
 .main-heading {
@@ -49,7 +49,7 @@ body {
 
 .middle {
     width: 50%;
-    background-color: darkblue;
+    background-color: #000000;
     margin: 0 auto;
     height: 92vh;
     border-top: 1px solid #ffd700;
@@ -73,7 +73,7 @@ body {
 }
 
 .unit button {
-    font-family: 'Koulen', 'sans-serif';
+    font-family: 'Macondo', 'sans-serif';
     background-color: #000000;
     color: #ffd700;
     border: 1px solid #ffd700;
@@ -95,7 +95,6 @@ body {
 
 #peasant-button {
     background-image: url('../images/peasant.png');
-    overflow: hidden;
 }
 
 #soldier-button {
@@ -107,7 +106,7 @@ body {
 }
 
 #upgrade-button {
-    background-image: url('../images/sword.jpg');
+    background-image: url('../images/sword.png');
     
 }
 
@@ -147,6 +146,7 @@ body {
 
 .click-spacer img {
     position: relative;
+    margin-top: 5px;
     top: 50px;
     height: 100%;
     width: 100%;
@@ -161,7 +161,7 @@ body {
 }
 
 .click-button {
-    height: min-content;
+    height: max-content;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -190,8 +190,9 @@ body {
 }
 
 .link-div button{
-    font-family: 'Koulen', 'sans-serif';
-    width: 100%;
+    font-family: 'Macondo', 'sans-serif';
+    padding: 10px;
+    width: 50%;
     font-size: inherit;
     background-color: #000000;
     border: 1px solid #ffd700;
@@ -292,6 +293,9 @@ a {
 
 @media screen and (max-width: 545px) {
 
+    .link-div button {
+        width: 100%;
+    }
     .unit-description {
         display: none;
     }
@@ -342,6 +346,10 @@ a {
 
     .link-div button {
         font-size: 70%;
+    }
+
+    .main-heading h1 {
+        font-size: 100%;
     }
 }
 
