@@ -110,11 +110,11 @@ function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
         else {
             unitPrice.innerHTML = 99999999;
         }
-        if((unitAmount.innerHTML +1) <99) {
-            unitAmount.innerHTML = (parseInt(unitAmount.innerHTML) + 1);
+        if(parseInt(unitAmount.innerHTML) === 99) {
+            unitAmount.innerHTML = 99;
         }
         else {
-            unitAmount.innerHTML = 99;
+            unitAmount.innerHTML = (parseInt(unitAmount.innerHTML)+1);
         }
         audio.play();
     }
