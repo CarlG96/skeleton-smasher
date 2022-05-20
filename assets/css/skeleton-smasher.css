@@ -177,9 +177,7 @@ body {
     background-color: #6e70a1;
 }
 
-.big-text {
-    font-size: 100%; 
-}
+
 
 .stats-div {
     font-size: 180%;
@@ -211,88 +209,59 @@ a {
 
 /*Media Queries*/
 
+/*Media query for devices below 1800px width*/
+
 @media screen and (max-width: 1800px) {
     .stats-div {
         font-size: 140%;
     }
 }
 
+/*Media query for devices below 1300px width*/
 
 @media screen and (max-width: 1300px) {
     .stats-div {
         font-size: 120%;
     }
-
 }
+
+/*Media query for devices below 1050px width*/
 
 @media screen and (max-width: 1050px) {
     .middle {
         width: 33%;
     }
-
     .right {
         width: 33%;
     }
-
     .left {
         width: 33%;
     }
-
 }
 
-
-
-@media screen and (max-width: 950px) {
-
-}
+/*Media query for devices below 760px width*/
 
 @media screen and (max-width: 760px) {
-
     .unit button {
         font-size: 90%;
         height: 13vh;
     }
-
-
     .price-text {
         font-size: 90%;
     }
 }
+
+/*Media query for devices below 610px width*/
 
 @media screen and (max-width: 610px) {
     .stats-div {
         font-size: 100%;
     }
-
 }
 
-@media screen and (max-width: 520px) {
-    .click-button {
-        font-size: 150%;
-    }
-
-    .big-text {
-        font-size: 100%;
-    }
-
-    .intro-text {
-        font-size: 90%;
-    }
-
-    .unit button {
-        font-size: 80%;
-        height: 12vh;
-    }
-
-    .price-text {
-        font-size: 80%;
-    }
-
-}
-
+/*Media query for devices below 545px width*/
 
 @media screen and (max-width: 545px) {
-
     .link-div button {
         width: 100%;
     }
@@ -305,7 +274,6 @@ a {
         font-size: 100%;
         Margin-top: 5px;
     }
-
     .price-text {
         display: block;
         float:none;
@@ -313,57 +281,71 @@ a {
         top: 0;
         font-size: 100%;
     } 
-    
-
 }
 
-@media screen and (max-width: 410px) {
+/*Media query for devices below 520px width*/
 
+@media screen and (max-width: 520px) {
+    .click-button {
+        font-size: 150%;
+    }
+    .intro-text {
+        font-size: 90%;
+    }
+    .unit button {
+        font-size: 80%;
+        height: 12vh;
+    }
+    .price-text {
+        font-size: 80%;
+    }
 }
+
+/*Media query for devices below 370px width*/
 
 @media screen and (max-width: 370px) {
     .click-button {
         font-size: 100%;
     }
-
-   .big-text {
+   .stats-div {
         font-size: 80%;
    }
-
    #upgrade-button {
        font-size: 70%;
    }
-
    .main-heading h1 {
        font-size: 120%;
    }
 }
 
+/*Media query for devices below 300px width*/
+
 @media screen and (max-width: 300px) {
-    .big-text {
+    .stats-div {
         font-size: 75%;
     }
-
     .link-div button {
         font-size: 70%;
     }
-
     .main-heading h1 {
         font-size: 100%;
     }
 }
+
+/*Media query for devices above 750px height*/
 
 @media screen and (min-height: 750px) {
     .price-text {
         font-size: 120%;
     }
 }
+
+/*Media query for devices above 1000px height*/
+
 @media screen and (min-height: 1000px) {
     .unit-description {
         font-size: 80%;
-    }
-
-    
+    }  
 }
 
 
