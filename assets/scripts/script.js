@@ -39,7 +39,7 @@ function addScore() {
     let score = document.getElementById("score");
     let upgradeAmount = document.getElementById("upgrade-amount");
     let audio = document.getElementById("smash-audio");
-    score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 500000);
+    score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999);
     audio.play();
 }
 
