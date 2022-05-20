@@ -80,8 +80,8 @@ body {
     font-size: 150%;
     height: 60%;
     background-repeat: no-repeat;
+    background-size: 50%;
     background-blend-mode:color-burn;
-    background-size: 100%;
     background-position: center center;
     float:left;
 
@@ -95,7 +95,6 @@ body {
 
 #peasant-button {
     background-image: url('../images/peasant.png');
-    background-size: 60%;
     overflow: hidden;
 }
 
