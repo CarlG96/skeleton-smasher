@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&display=swap');
 
+/*Selector for the entire body to get rid of box model extras and set the fonts and color of background*/
+
 body {
     margin: 0;
     padding: 0;
@@ -8,12 +10,16 @@ body {
     font-family: 'Macondo', 'sans-serif';
 }
 
+/*Selector for the title banner*/
+
 .main-heading {
     background-color: #000000;
     height: 5vh;
     width: 100%;
     position: relative;
 }
+
+/*Selector for title banner heading*/
 
 .main-heading h1 {
     margin: 0;
@@ -27,6 +33,8 @@ body {
     font-size: 150%;
 }
 
+/*Selector for all elements on right third of page*/
+
 .right {
     float: right;
     width: 25%;
@@ -36,6 +44,44 @@ body {
     border-bottom: 1px solid #ffd700;
     text-align: center;
 }
+
+/*Selector for all divs containing stats*/
+
+.stats-div {
+    font-size: 180%;
+    height: 13%;
+    overflow: hidden;
+    vertical-align: middle;
+    border-bottom: 1px solid #ffd700;
+}
+
+/*Selector for the button containing link back to index.html*/
+
+.link-div button{
+    font-family: 'Macondo', 'sans-serif';
+    padding: 10px;
+    width: 50%;
+    font-size: inherit;
+    background-color: #000000;
+    border: 1px solid #ffd700;
+    color: white;
+}
+
+/*Selector for current score area*/
+
+.current-score {
+    height: 90%;
+    color: #ffd700;
+}
+
+/*Selector for line rule in current score area*/
+
+.current-score hr {
+    border: 1px solid #ffd700;
+}
+
+
+/*Selector for all elements on left third of page*/
 
 .left {
     width: 25%;
@@ -47,15 +93,7 @@ body {
     text-align: center;
 }
 
-.middle {
-    width: 50%;
-    background-color: #000000;
-    margin: 0 auto;
-    height: 92vh;
-    border-top: 1px solid #ffd700;
-    border-bottom: 1px solid #ffd700;
-}
-
+/*Selector for all unit and upgrade divs on left-hand side*/
 
 .unit {
     height: 23vh;
@@ -63,14 +101,17 @@ body {
     border-top: 1px solid #ffd700;
     padding-left:5px;
     padding-right: 5px;
-    
 }
+
+/*Selector for all paragraph text in unit divs*/
 
 .unit p {
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+/*Selector for all buttons in unit divs*/
 
 .unit button {
     font-family: 'Macondo', 'sans-serif';
@@ -84,14 +125,17 @@ body {
     background-blend-mode:color-burn;
     background-position: center center;
     float:left;
-
     width: 15vw;
 }
+
+/*Selector for all descriptions under unit divs*/
 
 .unit-description {
     font-family: 'Macondo', 'sans-serif';
     font-size: 1.6vh;
 }
+
+/*id-selectors to add images to the background of buttons*/
 
 #peasant-button {
     background-image: url('../images/peasant.png');
@@ -107,20 +151,21 @@ body {
 
 #upgrade-button {
     background-image: url('../images/sword.png');
-    
 }
+
+/*Selector to display the background image and change color when the button is hovered over*/
 
 .unit button:hover {
     background-color: #6e70a1;
 }
 
-
+/*id-selector to not have a border for one unit div to make it look cleaner*/
 
 #peasant-div {
     border-top: none;
-    
 }
 
+/*Selector for all price texts on the right hand side*/
 .price-text {
     font-size: 3vh;
     font-weight: bold;
@@ -129,20 +174,26 @@ body {
     text-align:end;
 }
 
-.current-score {
-    height: 90%;
-    color: #ffd700;
+/*Selector for all central elements on page*/
+
+.middle {
+    width: 50%;
+    background-color: #000000;
+    margin: 0 auto;
+    height: 92vh;
+    border-top: 1px solid #ffd700;
+    border-bottom: 1px solid #ffd700;
 }
 
-.current-score hr {
-    border: 1px solid #ffd700;
-}
+/*Selector for div holding images*/
 
 .click-spacer {
     height: 30%;
     width: 100%;
     position: relative;
 }
+
+/*Selector for images in click-spacer div*/
 
 .click-spacer img {
     position: relative;
@@ -155,10 +206,14 @@ body {
     overflow: hidden;
 }
 
+/*Selector for div of the main button*/
+
 .click-button-div {
     text-align: center;
     height: 30%;
 }
+
+/*Selector for main button itself*/
 
 .click-button {
     height: max-content;
@@ -172,39 +227,11 @@ body {
     font-family: 'Koulen', 'sans-serif';
 }
 
+/*Selector for when main button is hovered over*/
+
 .click-button:hover {
     color: #ffffff;
     background-color: #6e70a1;
-}
-
-
-
-.stats-div {
-    font-size: 180%;
-    height: 13%;
-    overflow: hidden;
-    vertical-align: middle;
-    border-bottom: 1px solid #ffd700;
-}
-
-.link-div button{
-    font-family: 'Macondo', 'sans-serif';
-    padding: 10px;
-    width: 50%;
-    font-size: inherit;
-    background-color: #000000;
-    border: 1px solid #ffd700;
-    color: white;
-}
-
-a {
-    text-decoration: underline;
-    color: #ffd700;
-}
-
-.intro-text {
-    font-size: 3vh;
-    padding-top: 20%;
 }
 
 /*Media Queries*/
@@ -225,7 +252,8 @@ a {
     }
 }
 
-/*Media query for devices below 1050px width*/
+/*Media query for devices below 1050px width
+Changes widths of page divisions*/
 
 @media screen and (max-width: 1050px) {
     .middle {

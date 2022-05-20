@@ -44,7 +44,6 @@ function addScore() {
     } else {
         score.innerHTML = 99999999;
     }
-
     audio.play();
 }
 
