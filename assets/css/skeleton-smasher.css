@@ -353,10 +353,17 @@ a {
     }
 }
 
+@media screen and (min-height: 750px) {
+    .price-text {
+        font-size: 120%;
+    }
+}
 @media screen and (min-height: 1000px) {
     .unit-description {
         font-size: 80%;
     }
+
+    
 }
 
 
