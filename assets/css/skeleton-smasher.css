@@ -144,7 +144,7 @@ body {
 }
 
 .click-spacer img {
-    height: 100%;
+    height: 50%;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -310,6 +310,7 @@ a {
         float: none;
         width: 100%;
         font-size: 100%;
+        Margin-top: 5px;
     }
 
     .price-text {
@@ -348,6 +349,12 @@ a {
 
     .link-div button {
         font-size: 70%;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .unit-description {
+        font-size: 80%;
     }
 }
 
