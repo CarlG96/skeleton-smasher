@@ -39,7 +39,12 @@ function addScore() {
     let score = document.getElementById("score");
     let upgradeAmount = document.getElementById("upgrade-amount");
     let audio = document.getElementById("smash-audio");
-    score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999);
+    if((parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999) < 99999999) {
+        score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999);
+    } else {
+        score.innerHTML = 99999999;
+    }
+
     audio.play();
 }
 
@@ -51,7 +56,11 @@ function addScore() {
 function addTotalScore() {
     let totalScore = document.getElementById("total-score");
     let upgradeAmount = document.getElementById("upgrade-amount");
-    totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML));
+    if (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML) + 19999999 < 99999999) {
+        totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML)) + 19999999;
+    } else {
+        totalScore.innerHTML = 99999999;
+    }
 }
 
 /**
@@ -96,8 +105,17 @@ function increaseUnitAndPrice(unitAmount, unitPrice, factor) {
     let audio = document.getElementById("buy-item-audio");
     if (parseInt(score.innerHTML) >= parseInt(unitPrice.innerHTML)) {
         score.innerHTML -= parseInt(unitPrice.innerHTML);
-        unitPrice.innerHTML = Math.floor(parseInt(unitPrice.innerHTML) * factor);
-        unitAmount.innerHTML = (parseInt(unitAmount.innerHTML) + 1);
+        if(Math.floor(parseInt(unitPrice.innerHTML) * factor) <99999999) {
+        unitPrice.innerHTML = Math.floor(parseInt(unitPrice.innerHTML) * factor);}
+        else {
+            unitPrice.innerHTML = 99999999;
+        }
+        if((unitAmount.innerHTML +1) <99) {
+            unitAmount.innerHTML = (parseInt(unitAmount.innerHTML) + 1);
+        }
+        else {
+            unitAmount.innerHTML = 99;
+        }
         audio.play();
     }
 }
@@ -114,8 +132,17 @@ function incrementScore() {
     let peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
     let soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
     let paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
-    score.innerHTML = ((scoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
-    totalScore.innerHTML = ((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
+    if (((scoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100)) >= 99999999) {
+        score.innerHTML = 99999999;
+    } else {
+        score.innerHTML = ((scoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
+    }
+    if (((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100)) >= 99999999) {
+        totalScore.innerHTML = 99999999;
+    } else {
+        totalScore.innerHTML = ((totalScoreNum) + (peasantNum) + (soldierNum * 10) + (paladinNum * 100));
+    }
+
 }
 
 /**
