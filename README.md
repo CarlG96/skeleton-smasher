@@ -180,7 +180,51 @@ In this section, I discuss what output should be associated with what input when
 * Link to Main Page Button
     * Input: The user hovers over the Link to Main Page Button.
     * Output: The background of the Link to Main Page Button should change from black to a lavender color.
+    * Input: The user clicks on the Link to Main Page Button.
+    * Output: The user should be taken to the Main Game Page.
 ### Main Game Page Test Cases
+* Main Button
+    * Input: The user hovers over the Main Button.
+    * Output: The background of the Main Button should change from black to a lavender color.
+    * Input: The user clicks on the Main Button.
+    * Output: The Current Score and the Total Score should increase by 1 multiplied by the Sword Level statistic.
+    * Input: The user clicks on the Main Button and the amount of Current Score/ Total Score is 99999999 or the user's click would send the number over this amount.
+    * Output: The Current Score or Total Score would become 99999999. This has been coded in to be the limit as it prevents the user eventually acquiring a score which would cause visual glitching of the webpage.
+* Unit/ Upgrade Buttons
+    * Buy Peasant Button
+        * Input: The user hovers over the Buy Peasant Button.
+        * Output: The background of the Buy Peasant Button changes from black to lavender and the background image of a peasant is revealed to the user.
+        * Input: The user clicks the Buy Peasant Button and the Current Score statistic is greater than or equal to the Price Text for the Peasant unit.
+        * Output: The Number of Peasants statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 1. The Price Text for the Peasant unit is multiplied by 1.5. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Peasant Button and the Current Score statistic is greater than or equal to the Price Text for the Peasant unit but the Price Text is 99999999 or will be after being multiplied.
+        * Output: The Number of Peasants statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 1. The Price Text for the Peasant unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Peasant Button and the Current Score statistic is greater than or equal to the Price Text for the Peasant unit but the Price Text is 99999999 or will be after being multiplied and the Number of Peasants statistic is 98 or 99.
+        * Output: The Number of Peasants statistic is increased to 99. The Skeletons Smashed Per Second statistic is not increased. The Price Text for the Peasant unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Peasant Button and the Current Score statistic is less than the Price Text for the Peasant unit.
+        * Output: Nothing will change.
+    * Buy Soldier Button
+        * Input: The user hovers over the Buy Soldier Button.
+        * Output: The background of the Buy Soldier Button changes from black to lavender and the background image of a soldier is revealed to the user.
+        * Input: The user clicks the Buy Soldier Button and the Current Score statistic is greater than or equal to the Price Text for the Soldier unit.
+        * Output: The Number of Soldiers statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 10. The Price Text for the Soldier unit is multiplied by 1.8. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Soldier Button and the Current Score statistic is greater than or equal to the Price Text for the Soldier unit but the Price Text is 99999999 or will be after being multiplied.
+        * Output: The Number of Soldiers statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 10. The Price Text for the Soldier unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Soldier Button and the Current Score statistic is greater than or equal to the Price Text for the Soldier unit but the Price Text is 99999999 or will be after being multiplied and the Number of Soldiers statistic is 98 or 99.
+        * Output: The Number of Soldiers statistic is increased to 99. The Skeletons Smashed Per Second statistic is not increased. The Price Text for the Soldier unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Soldier Button and the Current Score statistic is less than the Price Text for the Soldier unit.
+        * Output: Nothing will change.
+    * Buy Paladin Button
+        * Input: The user hovers over the Buy Paladin Button.
+        * Output: The background of the Buy Paladin Button changes from black to lavender and the background image of a paladin is revealed to the user.
+        * Input: The user clicks the Buy Paladin Button and the Current Score statistic is greater than or equal to the Price Text for the Paladin unit.
+        * Output: The Number of Paladins statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 100. The Price Text for the Paladin unit is multiplied by 2.2. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Paladin Button and the Current Score statistic is greater than or equal to the Price Text for the Paladin unit but the Price Text is 99999999 or will be after being multiplied.
+        * Output: The Number of Paladins statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 100. The Price Text for the Paladin unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Paladin Button and the Current Score statistic is greater than or equal to the Price Text for the Paladin unit but the Price Text is 99999999 or will be after being multiplied and the Number of Paladins statistic is 98 or 99.
+        * Output: The Number of Paladins statistic is increased to 99. The Skeletons Smashed Per Second statistic is not increased. The Price Text for the Paladin unit will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Paladin Button and the Current Score statistic is less than the Price Text for the Paladin unit.
+        * Output: Nothing will change.
+* Back to Intro Button
 ## Bugs
 ## Deployment
 
