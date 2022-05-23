@@ -105,4 +105,12 @@ This site was temporarily deployed for testing purposes in Gitpod Workspaces. He
 * Finally, I opened the link that popped up to open up the Skeleton Smasher Intro webpage in a new tab.
 
 ### GitHub
+This site was deployed on GitHub Pages. Here are the steps I took to deploy the website:
+* Firstly, I went to my repository for skeleton-smasher on GitHub.
+* Secondly, I clicked on Settings.
+* Thirdly, I clicked on Pages in the sidebar.
+* Then, I selected the main branch to publish.
+* I then waited and a link to the intro page was provided.
+
+The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smasher](https://carlg96.github.io/skeleton-smasher/)
 ## Credits
