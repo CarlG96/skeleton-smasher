@@ -38,7 +38,7 @@ body {
 .right {
     float: right;
     width: 25%;
-    background-color: rgb(88, 87, 87);
+    background-color: #585757;
     height: 92vh;
     border-top: 1px solid #ffd700;
     border-bottom: 1px solid #ffd700;
@@ -85,7 +85,7 @@ body {
 
 .left {
     width: 25%;
-    background-color: rgb(88, 87, 87);
+    background-color: #585757;
     float: left;
     height: 92vh;
     border-top: 1px solid #ffd700;
