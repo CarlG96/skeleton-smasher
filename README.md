@@ -90,6 +90,16 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
         * As going back to the Intro Page will erase the user's progress on the Main Game Page, the text of the button is small so it is less likely the user will click the button.
 
 ## Future Features
+There are a number of features that if more time was given I would like to add to the Skeleton Smasher game.
+* More Unit Types
+    * I had intended to add more unit types at the beginning (see the picture of my wireframe in the Wireframes and Prototypes section) however realised that it would go beyond the scope of this project. If I had more time I would like to add more types of units for the user to purchase that could maybe act slightly differently to the current unit types. For example, perhaps there would be a unit which would generate lots of score per second and the first one would be relatively cheap but the factor used on it when calculating its Price Text could be extortionate so the user would only be able to purchase such a unit very rarely and each one would feel like a major milestone.
+* More Upgrade Types
+    * I would have liked to add a few more upgrade types that would also do different things like perhaps increase the amount of score that each Peasant unit produces per second. This would make Peasant units more valuable as the Skeletons Smashed Per Second amount increases as right now they are heavily outshined by the Soldier and Paladin units except for right when the user starts the game.
+* A Hidden Future Unit Type Feature
+    * Many clicker games create a sense of curiosity in the player by not revealing all of their unit types at the beginning of the game. Some have icons of the units that are shadowed out until the player generates enought Current Score or Total Score to see them in which case they will become fully visible and the amount needed to purchase them becomes visible as well. I would have liked to do this but such a feature would require a lot of time all by itself and might even be larger than the current project in scope if enough units like this were introduced.
+* Additional Gameplay Features
+    * Many clicker games realise that eventually the player will get bored of mindlessly clicking or waiting to purchase their next unit or upgrade and will include minigames to keep the player entertained. As the sky is the limit for these sort of features I decided not to attempt this as it could easily have surpasses the scope of this project in complexity.
+
 ## Typography and Color Scheme
 
 * Color Scheme 
@@ -165,6 +175,12 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
     //IMG HERE
 
 ## Test Cases
+In this section, I discuss what output should be associated with what input when a user accesses either the Intro Page or the Main Game Page.
+### Intro Page Test Cases
+* Link to Main Page Button
+    * Input: The user hovers over the Link to Main Page Button.
+    * Output: The background of the Link to Main Page Button should change from black to a lavender color.
+### Main Game Page Test Cases
 ## Bugs
 ## Deployment
 
