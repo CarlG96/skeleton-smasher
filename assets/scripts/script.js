@@ -39,8 +39,8 @@ function addScore() {
     let score = document.getElementById("score");
     let upgradeAmount = document.getElementById("upgrade-amount");
     let audio = document.getElementById("smash-audio");
-    if((parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999) < 99999999) {
-        score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML) + 99999999);
+    if((parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML)) < 99999999) {
+        score.innerHTML = (parseInt(score.innerHTML) + parseInt(upgradeAmount.innerHTML));
     } else {
         score.innerHTML = 99999999;
     }
@@ -55,8 +55,8 @@ function addScore() {
 function addTotalScore() {
     let totalScore = document.getElementById("total-score");
     let upgradeAmount = document.getElementById("upgrade-amount");
-    if (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML) + 19999999 < 99999999) {
-        totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML)) + 19999999;
+    if (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML) < 99999999) {
+        totalScore.innerHTML = (parseInt(totalScore.innerHTML) + parseInt(upgradeAmount.innerHTML));
     } else {
         totalScore.innerHTML = 99999999;
     }
