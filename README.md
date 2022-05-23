@@ -174,6 +174,10 @@ There are a number of features that if more time was given I would like to add t
     //IMG HERE
     //IMG HERE
 
+* Limit Testing
+    * I changed the code before completion so that each click would increase the Current Score and Total Score up to 99999999. I then purchased up to 99 of each unit and maxed out the Price Text on each unit/ upgrade. This was to make sure my code prevented numbers rising above 99999999 for Current Score, Total Score or Price Texts and above 99 for units and upgrades. As Skeletons Smashed Per Second is dependent upon all these factors, its max limit is capped at 10989. I tested these limits because although it is unlikely anyone would reach them, should they surpass them enough they would cause visual glitches on the webpage when number texts would become larger than their containers (and other measures such as overflow hiding or scrolling would not look good or work well for the user).
+
+//IMG HERE
 ## Test Cases
 In this section, I discuss what output should be associated with what input when a user accesses either the Intro Page or the Main Game Page.
 ### Intro Page Test Cases
@@ -224,7 +228,22 @@ In this section, I discuss what output should be associated with what input when
         * Output: The Number of Paladins statistic is increased to 99. The Skeletons Smashed Per Second statistic is not increased. The Price Text for the Paladin unit will change to the limit of 99999999. Audio of a victory sound will play.
         * Input: The user clicks the Buy Paladin Button and the Current Score statistic is less than the Price Text for the Paladin unit.
         * Output: Nothing will change.
+    * Buy Buy Sword Upgrade Button
+        * Input: The user hovers over the Buy Sword Upgrade Button.
+        * Output: The background of the Buy Sword Upgrade Button changes from black to lavender and the background image of a sword is revealed to the user.
+        * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is greater than or equal to the Price Text for the Sword upgrade.
+        * Output: The Sword Level statistic is increased by 1. The Price Text for the Sword upgrade is multiplied by 2. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is greater than or equal to the Price Text for the Sword upgrade but the Price Text is 99999999 or will be after being multiplied.
+        * Output: The Sword Level statistic is increased by 1. The Price Text for the Sword upgrade will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is greater than or equal to the Price Text for the Sword upgrade but the Price Text is 99999999 or will be after being multiplied and the Sword Level statistic is 98 or 99.
+        * Output: The Sword Level statistic is increased to 99. The Price Text for the Sword upgrade will change to the limit of 99999999. Audio of a victory sound will play.
+        * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is less than the Price Text for the Sword upgrade.
+        * Output: Nothing will change.
 * Back to Intro Button
+    * Input: The user hovers over the Back to Intro Button.
+    * Output: The background of the Back to Intro Button changes from black to lavender.
+    * Input: The user clicks on the Back to Intro Button.
+    * Output: The user is taken back to the Intro Page.
 ## Bugs
 ## Deployment
 
