@@ -13,7 +13,7 @@ The Skeleton Smasher website is a website that allows the user to play a simple 
 //IMG HERE
 
 
- The user is directed to the actual game page and has to click the button and eventually buy units of increasing expense and quality and upgrades for their clicking. The game tracks their score, total score among other statistics and the ver increasing numbers provide a sense of satisfaction to the user even if they are not actually doing anything strenous or challenging.
+The user is directed to the actual game page and has to click the button and eventually buy units of increasing expense and quality and upgrades for their clicking. The game tracks their score, total score among other statistics and the ver increasing numbers provide a sense of satisfaction to the user even if they are not actually doing anything strenous or challenging.
 
  //IMG HERE
 ## Features
@@ -21,14 +21,47 @@ The Skeleton Smasher website is a website that allows the user to play a simple 
 ## Typography and Color Scheme
 ## Wireframes and Prototypes
 ## Technology Used
+* HTML
+    * Used to build the structure of the website and for audio and some of the image elements.
+
+* CSS 
+    * Used to style the website and change the website depending on screen sizes with media queries. Also used to add background images to the unit/ upgrade buttons.
+
+* Balsamiq Wireframes
+    * Used for prototyping and making a rough outline of the main game webpage (the intro was not sufficiently complex enough to warrant a wireframe).
+
+* Font Awesome
+    * Scripts and Icons were used to 
 ## Testing
 * HTML Validator
+    * When passed through the W3C HTML validator no errors were found on index.html or skeleton-smasher.html files. There were warnings about not using headings for some sections however I have chosen to ignore these warnings as they would negatively affect the look of the website and would only clutter the screenspace on smaller device sizes.
 * CSS Validator
+    * When passed through the W3C CSS validator no errors were found.
 * Search Engines
+    * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional and work in the Google Chrome web browser.
+    * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional and work in the Brave web browser.
+    * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional and work in the Firefox web browser.
+
 * Screen Sizes
+    * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional across a wide range of devices in DevTools with no obvious visual glitches.
+
 * Text Contrast
+    * The dark background of dark grey and black contrast well with the gold colored and white text to allow it to be easily read and made legible.
+
 * Functionality
+    * I confirmed that the external links between the two webpages are functional.
+    * I confirmed that the buttons for adding score/ total score and buying units and upgrades are functional; the buttons produce the desired output on the right hand side of the screen in regards to numbers.
+    * I confirmed that the automatic incremental functions for score, total score and Skeletons Smashed per second work as intended and display the correct values.
+    * I confirmed that there are limits to the amount of score, total score, units and upgrades such that the numbers never rise to high to cause visual glitching on the webpage across a wide range of devices.
+
+    //IMG HERE
 * Lighthouse Check
+    * I confirmed that the Skeleton Smasher Intro and Skeleton Smasher webpages passed the Lighthouse Check in DevTools across both mobile and desktop environments.
+
+    //IMG HERE
+    //IMG HERE
+    //IMG HERE
+    //IMG HERE
 
 ## Test Cases
 ## Bugs
