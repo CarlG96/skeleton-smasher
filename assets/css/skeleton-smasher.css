@@ -67,6 +67,10 @@ body {
     color: white;
 }
 
+.link-div button:hover{
+    background-color: #6e70a1;
+}
+
 /*Selector for current score area*/
 
 .current-score {
