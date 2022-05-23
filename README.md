@@ -31,7 +31,17 @@ The user is directed to the actual game page and has to click the button and eve
     * Used for prototyping and making a rough outline of the main game webpage (the intro was not sufficiently complex enough to warrant a wireframe).
 
 * Font Awesome
-    * Scripts and Icons were used to 
+    * Scripts and Icons were used to add icons to the Skeleton Smasher Intro page. 
+
+* Google Fonts
+    * Used to style the fonts of the website.
+
+* GitHub 
+    * Used for the repository and deployment of the website.
+
+* Gitpod 
+    * Used for the development of the website.
+    
 ## Testing
 * HTML Validator
     * When passed through the W3C HTML validator no errors were found on index.html or skeleton-smasher.html files. There were warnings about not using headings for some sections however I have chosen to ignore these warnings as they would negatively affect the look of the website and would only clutter the screenspace on smaller device sizes.
