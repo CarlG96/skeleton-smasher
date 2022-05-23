@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="assets/css/skeleton-smasher.css">
     <title>Skeleton Smasher</title>
 </head>
+
 <body>
     <!--Audio elements to play in the game-->
-    <audio id="smash-audio" src="assets/sounds/smash-audio.mp3"></audio> <!--Audio element to play when the main button is clicked-->
-    <audio id="buy-item-audio" src="assets/sounds/buy-item-audio.mp3"></audio> <!--Audio element to play when a unit or upgrade is bought-->
+    <audio id="smash-audio" src="assets/sounds/smash-audio.mp3"></audio>
+    <!--Audio element to play when the main button is clicked-->
+    <audio id="buy-item-audio" src="assets/sounds/buy-item-audio.mp3"></audio>
+    <!--Audio element to play when a unit or upgrade is bought-->
     <!--Title-->
     <header>
         <div class="main-heading">
@@ -25,39 +28,39 @@
         <div class="right">
             <div class="current-score">
                 <div class="stats-div">
-                <span>Current Score:</span>
-                <span id="score">0</span> <!--Displays current score-->
-
+                    <span>Current Score:</span>
+                    <span id="score">0</span>
+                    <!--Displays current score-->
                 </div>
                 <div class="stats-div">
-                <span>Total Score:</span>
-                <span id="total-score">0</span> <!--Displays total score-->
-                
+                    <span>Total Score:</span>
+                    <span id="total-score">0</span>
+                    <!--Displays total score-->
                 </div>
                 <div class="stats-div">
-                <span>Skeletons Smashed per second:</span>
-                <span id="per-second">0</span> <!--Displays rate of score increase-->
-                
+                    <span>Skeletons Smashed per second:</span>
+                    <span id="per-second">0</span>
+                    <!--Displays rate of score increase-->
                 </div>
                 <div class="stats-div">
-                <span>Number of Peasants:</span>
-                <span id="peasant-amount">0</span> <!--Displays number of peasants bought-->
-                
+                    <span>Number of Peasants:</span>
+                    <span id="peasant-amount">0</span>
+                    <!--Displays number of peasants bought-->
                 </div>
                 <div class="stats-div">
-                <span>Number of Soldiers:</span>
-                <span id="soldier-amount">0</span> <!--Displays number of soldiers bought-->
-                
+                    <span>Number of Soldiers:</span>
+                    <span id="soldier-amount">0</span>
+                    <!--Displays number of soldiers bought-->
                 </div>
                 <div class="stats-div">
-                <span>Number of Paladins:</span>
-                <span id="paladin-amount">0</span> <!--Displays number of paladins bought-->
-                
+                    <span>Number of Paladins:</span>
+                    <span id="paladin-amount">0</span>
+                    <!--Displays number of paladins bought-->
                 </div>
                 <div class="stats-div">
-                <span >Sword Level:</span>
-                <span id="upgrade-amount">1</span> <!--Displays sword upgrade level-->
-                
+                    <span>Sword Level:</span>
+                    <span id="upgrade-amount">1</span>
+                    <!--Displays sword upgrade level-->
                 </div>
             </div>
             <div class="link-div">
@@ -76,7 +79,8 @@
                         Peasants smash one skeleton per second.
                     </span>
                 </p>
-                <button id="peasant-button" class="unit-button" data-unit="1">Buy Peasant</button> <!--Buys peasant and shows cost-->
+                <button id="peasant-button" class="unit-button" data-unit="1">Buy Peasant</button>
+                <!--Buys peasant and shows cost-->
                 <span class="price-text">Price:</span>
                 <span class="price-text" id="peasant-price">30</span>
             </div>
@@ -85,7 +89,8 @@
                     <em>Each Soldier comes armed with better weapons and armour, than Peasants. </em>
                     <span>Soldiers smash ten skeletons per second.</span>
                 </p>
-                <button id="soldier-button" class="unit-button" data-unit="2">Buy Soldier</button> <!--Buys soldier an shows cost-->
+                <button id="soldier-button" class="unit-button" data-unit="2">Buy Soldier</button>
+                <!--Buys soldier an shows cost-->
                 <span class="price-text">Price:</span>
                 <span class="price-text" id="soldier-price">500</span>
             </div>
@@ -94,7 +99,8 @@
                     <em>The Paladin comes ready to destroy any undead in their way.</em>
                     <span>Paladins smash one hundred skeletons per second.</span>
                 </p>
-                <button id="paladin-button" class="unit-button" data-unit="3">Buy Paladin</button> <!--Buys paladin and shows cost-->
+                <button id="paladin-button" class="unit-button" data-unit="3">Buy Paladin</button>
+                <!--Buys paladin and shows cost-->
                 <span class="price-text">Price:</span>
                 <span class="price-text" id="paladin-price">2000</span>
             </div>
@@ -111,14 +117,18 @@
         <!--Click area-->
         <div class="middle">
             <div class="click-button-div">
-                <button type="button" class="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button> <!--Click this button for score-->
-            </div>
-            <div class="click-spacer"> 
-                <img src="assets/images/skull.png" alt="Image of a spooky skull"><!--Skull image-->
+                <button type="button" class="click-button" id="main-button">CLICK TO <br>SMASH <br>SKELETONS!</button>
+                <!--Click this button for score-->
             </div>
             <div class="click-spacer">
-                <img src="assets/images/skull.png" alt="Image of spooky skull"><!--Skull image-->
+                <img src="assets/images/skull.png" alt="Image of a spooky skull">
+                <!--Skull image-->
             </div>
+            <div class="click-spacer">
+                <img src="assets/images/skull.png" alt="Image of spooky skull">
+                <!--Skull image-->
+            </div>
+        </div>
     </section>
 
     <!--Scripts-->
