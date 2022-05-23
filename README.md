@@ -39,6 +39,29 @@ The project consists of two webpages which I will refer to as 'Intro Page' and '
 
 //IMG HERE
 ### Features of Main Game Page
+* Title
+//IMG HERE
+* Left Section 
+    //IMG HERE
+    * Buttons
+    //IMG OF EACH HIGHLIGHTED BUTTON
+    * Description Texts
+    * Price Texts
+* Middle Section 
+    //IMG HERE
+    * Main Button
+    * Skull Images
+* Right Section
+    //IMG HERE
+    * Current Score
+    * Total Score
+    * Skeletons Smashed Per Second
+    * Number of Peasants
+    * Number of Soldiers
+    * Number of Paladins
+    * Sword Level
+    * Back to Intro Button
+
 ## Future Features
 ## Typography and Color Scheme
 
