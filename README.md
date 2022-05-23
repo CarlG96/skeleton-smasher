@@ -19,7 +19,26 @@ The user is directed to the actual game page and has to click the button and eve
 ## Features
 ## Future Features
 ## Typography and Color Scheme
+
+* Color Scheme 
+    * The color scheme for Skeleton Smasher was designed to be dark and spooky in keeping with the themes of game. 
+    * The hex values of the colors used in the two webpages are:
+        * #000000 for the black color which mostly acts as a background color or to provide contrast to the text.
+        * #585757 for the dark grey color which mostly acts as a background color or to provide contrast to the text.
+        * #ffffff for the white color which is used as the font color for the main buttons of both webpages to draw the user's eye to them immediately whilst still providing contrast with the white background. It is also used for the link button on the main page but as that is in the corner and the font-size is smaller than the main button the user's eye is unlikely to be immediately drawn there. It is also used as a border color for the main button.
+        * #ffd700 for the gold color which is used as a font color, for the icons on the intro page and for line breaks and borders on the main page to keep things separated visually.
+        * #6e70a1 for the lavender color. This is used as a visual feedback to the user telling them that the element they have their mouse over or have touched is interactive and is used to highlight buttons across the two webpages. It provides contrast with the black backgrounds that the buttons have before being hovered over.
+
+* Fonts
+    * Even though the color scheme was designed to be dark and spooky; I still wanted the website itself to have a somewhat whimsical feel, like an retro game. For this reason I chose the 'Macondo' font to act as the main font across both pages because of its whimsical feel. For the main buttons on each page, however, I used the 'Koulen' font to draw the user's attention immediately.
+    * These fonts were taken from [Google Fonts](https://fonts.google.com/).
 ## Wireframes and Prototypes
+
+* Balsamiq Wireframes
+    * Before beginning the project, I used Balsamiq Wireframes to produce a rough idea of what I wanted the main Skeleton Smasher page to look like. The actual webpage went through many changes and the wireframe looks very different from the actual product but the core features are still present in this image here:
+
+    //IMG HERE
+
 ## Technology Used
 * HTML
     * Used to build the structure of the website and for audio and some of the image elements.
@@ -41,7 +60,7 @@ The user is directed to the actual game page and has to click the button and eve
 
 * Gitpod 
     * Used for the development of the website.
-    
+
 ## Testing
 * HTML Validator
     * When passed through the W3C HTML validator no errors were found on index.html or skeleton-smasher.html files. There were warnings about not using headings for some sections however I have chosen to ignore these warnings as they would negatively affect the look of the website and would only clutter the screenspace on smaller device sizes.
@@ -76,6 +95,14 @@ The user is directed to the actual game page and has to click the button and eve
 ## Test Cases
 ## Bugs
 ## Deployment
+
 ### Gitpod
+This site was temporarily deployed for testing purposes in Gitpod Workspaces. Here are the steps I took to deploy the website:
+
+* Firstly, I opened up Gitpod Workspaces.
+* Secondly, I opened the skeleton-smasher workspace.
+* Thirdly, I type 'python3 -m http.server' into the bash terminal.
+* Finally, I opened the link that popped up to open up the Skeleton Smasher Intro webpage in a new tab.
+
 ### GitHub
 ## Credits
