@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&display=swap');
 
-/*Styles for body, paragraphs and buttons*/
+/*Styles for body, paragraphs, headings and buttons*/
 
 body {
     color: #ffd700;
@@ -13,6 +13,10 @@ body {
 p {  
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    text-decoration: wavy underline;
 }
 
 button {

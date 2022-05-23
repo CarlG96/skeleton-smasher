@@ -17,6 +17,17 @@ The user is directed to the actual game page and has to click the button and eve
 
  //IMG HERE
 ## Features
+The project consists of two webpages which I will refer to as 'Intro Page' and 'Main Game Page'.
+
+### Features of Intro Page
+
+* Title
+    * The Title consists of a heading in a large gold font that reads 'Skeleton Smasher!'. This is purely for introductory purposes.
+
+//IMG HERE
+* Story Section
+    * The Story Section consists of a short paragraph of text in that attempts to give a story context to the clicker game. The paragraph has skull icons placed at the beginning and end of it. This paragraph is purely for setting the tone of the game and is meant to be similar to text introductions that would appear in retro games.
+### Features of Main Game Page
 ## Future Features
 ## Typography and Color Scheme
 
@@ -113,4 +124,5 @@ This site was deployed on GitHub Pages. Here are the steps I took to deploy the 
 * I then waited and a link to the intro page was provided.
 
 The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smasher](https://carlg96.github.io/skeleton-smasher/)
+
 ## Credits
