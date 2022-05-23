@@ -22,11 +22,22 @@ The project consists of two webpages which I will refer to as 'Intro Page' and '
 ### Features of Intro Page
 
 * Title
-    * The Title consists of a heading in a large gold font that reads 'Skeleton Smasher!'. This is purely for introductory purposes.
+    * The Title consists of a heading in a large gold font that reads 'Skeleton Smasher!'. This is purely for introductory purposes for the user.
 
 //IMG HERE
 * Story Section
     * The Story Section consists of a short paragraph of text in that attempts to give a story context to the clicker game. The paragraph has skull icons placed at the beginning and end of it. This paragraph is purely for setting the tone of the game and is meant to be similar to text introductions that would appear in retro games.
+
+//IMG HERE
+* How to Play Section
+    * The How to Play Section consists of a heading with a wavy underline and four lines of text each with skull icons at the beginning and end of them. These lines of text inform the user of how to play the game and this along with the feedback from the highlighting of the buttons in the Main Game Page will allow the user to quickly understand how the game works.
+    
+//IMG HERE
+* Link to Main Page Button
+    * The Link to Main Page Button is a button with bold white text in a different font that reads: 'Play Skeleton Smasher!'. This is where the player's eye should be drawn to and this is because it is the most important part of the page (being the link between the Intro Page and the Main Game Page).
+    * The background for the button highlights a lavender-like color when hovered over, providing the user with visual feedback that this element can be clicked on.
+
+//IMG HERE
 ### Features of Main Game Page
 ## Future Features
 ## Typography and Color Scheme
