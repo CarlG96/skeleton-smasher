@@ -318,5 +318,12 @@ The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smas
 ## Credits
 
 * Content
+    * The code used to vertically and horizontally center the Main Game Page Title was taken from [W3schools](https://www.w3schools.com/howto/howto_css_center-vertical.asp)
+    * For information about clicker games I read this [article](https://www.gamedesigning.org/learn/clicker-games/).
+    * I used this [HTML Validator](https://validator.w3.org/) and this [CSS Validator](https://jigsaw.w3.org/css-validator/) to validate my HTML and CSS code.
+    * I used [JSHint](https://jshint.com/) to test script.js.
 
 * Media
+    * I used [Pixabay](https://pixabay.com/) for the Peasant, Soldier, Paladin, Sword and Skull images.
+    * I used [Font Awesome](https://fontawesome.com/) for the skull icons used in the Intro Page.
+    * The Font Families I used were from [Google Fonts](https://fonts.google.com/).
