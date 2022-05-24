@@ -60,7 +60,15 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
         * The Unit/ Upgrade Buttons are four buttons that the user can click to either (in the case of the Buy Peasant, Buy Soldier or Buy Paladin buttons) automate the clicking process, or allow the amount of score they generate per click to increase (in the case of the Buy Sword Upgrade button).
         * Hovering over the buttons causes them to change background color from black to lavender to reveal the background images which correspond to the type of unit or upgrade available for purchase.
         * If the player has an amount of score equal to or greater than the price in the Price Text corresponding to that button, the corresponding statistic text in the Right Section will increase by 1, the amount of score the user bought the unit or upgrade with will be subtracted from the Score statistic, the Skeletons Smashed per second statistic will update after 1/60th of a second, the Price Text will update and a victory sound will play.
-    //IMG OF EACH HIGHLIGHTED BUTTON
+    
+    <img src="README-pictures/peasant-button.png">
+
+    <img src="README-pictures/soldier-button.png">
+
+    <img src="README-pictures/paladin-button.png">
+
+    <img src="README-pictures/sword-button.png">
+
     * Description Texts
         * The Description Texts are italicised texts explaining a story purpose behind the unit and what amount of score they automate per second. As this information is useful but not critical to the functioning of the game, on smaller screen sizes such as mobile devices this text is removed by media query in order to make the website less cluttered.
     * Price Texts
@@ -185,10 +193,21 @@ There are a number of features that if more time was given I would like to add t
 * Lighthouse Check
     * I confirmed that the Skeleton Smasher Intro and Skeleton Smasher webpages passed the Lighthouse Check in DevTools across both mobile and desktop environments.
 
-    //IMG HERE
-    //IMG HERE
-    //IMG HERE
-    //IMG HERE
+    Lighthouse Check for Intro Page on desktop:
+
+    <img src="README-pictures/intro-desktop-lighthouse.png">
+
+    Lighthouse Check for Intro Page on mobile:
+
+    <img src="README-pictures/intro-mobile-lighthouse.png">
+
+    Lighthouse Check for Main Game Page on desktop:
+
+    <img src="README-pictures/main-desktop-lighthouse.png">
+
+    Ligthouse Check for Main Game Page on mobile (had to be run in Brave Private Window to pass check):
+
+    <img src="README-pictures/main-mobile-lighthouse.png">
 
 * Limit Testing
     * I changed the code before completion so that each click would increase the Current Score and Total Score up to 99999999. I then purchased up to 99 of each unit and maxed out the Price Text on each unit/ upgrade. This was to make sure my code prevented numbers rising above 99999999 for Current Score, Total Score or Price Texts and above 99 for units and upgrades. As Skeletons Smashed Per Second is dependent upon all these factors, its max limit is capped at 10989. I tested these limits because although it is unlikely anyone would reach them, should they surpass them enough they would cause visual glitches on the webpage when number texts would become larger than their containers (and other measures such as overflow hiding or scrolling would not look good or work well for the user).
@@ -297,3 +316,7 @@ This site was deployed on GitHub Pages. Here are the steps I took to deploy the 
 The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smasher](https://carlg96.github.io/skeleton-smasher/)
 
 ## Credits
+
+* Content
+
+* Media
