@@ -147,7 +147,11 @@ There are a number of features that if more time was given I would like to add t
 * HTML Validator
     * When passed through the W3C HTML validator no errors were found on index.html or skeleton-smasher.html files. There were warnings about not using headings for some sections however I have chosen to ignore these warnings as they would negatively affect the look of the website and would only clutter the screenspace on smaller device sizes.
 * CSS Validator
-    * When passed through the W3C CSS validator no errors were found.
+    * When passed through the W3C CSS validator no errors were found on skeleton-smasher.css or intro.css.
+
+* JSHint
+    * When passed through JSHint no errors were found on script.js.
+
 * Search Engines
     * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional and work in the Google Chrome web browser.
     * The Skeleton Smasher Intro and Skeleton Smasher webpages are fully functional and work in the Brave web browser.
@@ -245,6 +249,19 @@ In this section, I discuss what output should be associated with what input when
     * Input: The user clicks on the Back to Intro Button.
     * Output: The user is taken back to the Intro Page.
 ## Bugs
+Here is a list of the more significant bugs I encountered when building Skeleton Smasher.
+* <button> <a> Tag Incompatibility
+    * Bug: The W3C validator informed me that it is bad practice to mix 'button; and 'a' elements inside one another which I had done up until the point of validation.
+    * Fix: In order to correct this, I instead used a 'form' element containing a 'button' element inside it. The form had a method attribute of 'GET' and an action attribute of the intended destination.
+* JSHint Undeclared Variables
+    * Bug: When running script.js through JSHint the first time it was revelealed many of my variables were not defined due to me not using the 'let' keyword. As such the scopes they were in were causing weird glitches in the logic of my program (ie removing a variable from a function did not cause the logic to break because elsewhere there was a variable with the same name outside the function.)
+    * Fix: Added the 'let' keyword to variables when not yet declared in a function.
+* for Loop to forEach() function problems
+    * Bug: I changed the for loop in script.js which iterated over the Unit/ Upgrade Buttons to give them event listeners to a forEach() function. At first this caused the logic of the program to not work as intended.
+    * Fix: I realised that this was because the forEach() function would only iterate over an array not a HTMLCollection and added an Array.from() function before the document.getElementsFromClassName() function call which fixed the problem completely and the program began to work as expected.
+* Font Causing Lighthouse Checks to Fail
+    * Bug: Lighthouse Checks were failing on both webpages. Worse so on the mobile checks.
+    * Fix: After significant trial and error, I found that decreasing the amount of the 'Koulen' font that was imported from Google Fonts seemed to have a positive effect on the Lighthouse Check performance metric. Whereas before most of the text on both webpages was in 'Koulen' it now only occurs on the main buttons on each page.
 ## Deployment
 
 ### Gitpod
