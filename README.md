@@ -10,12 +10,13 @@ Although seemingly pointless, clicker games are enjoyable because they reward th
 The Skeleton Smasher website is a website that allows the user to play a simple clicker game for their own enjoyment. The user comes to the landing page where they are told the fictional story behind the game and given the instructions to play the game.
 
 
-//IMG HERE
+<img src="README-pictures/intro-page.png">
 
 
 The user is directed to the actual game page and has to click the button and eventually buy units of increasing expense and quality and upgrades for their clicking. The game tracks their score, total score among other statistics and the ver increasing numbers provide a sense of satisfaction to the user even if they are not actually doing anything strenous or challenging.
 
- //IMG HERE
+ <img src="README-pictures/responsive.png">
+
 ## Features
 The project consists of two webpages which I will refer to as 'Intro Page' and 'Main Game Page'.
 
@@ -24,29 +25,37 @@ The project consists of two webpages which I will refer to as 'Intro Page' and '
 * Title
     * The Title consists of a heading in a large gold font that reads 'Skeleton Smasher!'. This is purely for introductory purposes for the user.
 
-//IMG HERE
+<img src="README-pictures/intro-title.png">
+
 * Story Section
     * The Story Section consists of a short paragraph of text in that attempts to give a story context to the clicker game. The paragraph has skull icons placed at the beginning and end of it. This paragraph is purely for setting the tone of the game and is meant to be similar to text introductions that would appear in retro games.
 
-//IMG HERE
+<img src="README-pictures/intro-story-section.png">
+
 * How to Play Section
     * The How to Play Section consists of a heading with a wavy underline and four lines of text each with skull icons at the beginning and end of them. These lines of text inform the user of how to play the game and this along with the feedback from the highlighting of the buttons in the Main Game Page will allow the user to quickly understand how the game works.
     
-//IMG HERE
+<img src="README-pictures/intro-how-to-play.png">
+
 * Link to Main Page Button
     * The Link to Main Page Button is a button with bold white text in a different font that reads: 'Play Skeleton Smasher!'. This is where the player's eye should be drawn to and this is because it is the most important part of the page (being the link between the Intro Page and the Main Game Page).
     * The background for the button highlights a lavender-like color when hovered over, providing the user with visual feedback that this element can be clicked on.
 
-//IMG HERE
+<img src="README-pictures/intro-link-button.png">
+
 ### Features of Main Game Page
 
 The Main Game Page is split into four distinct sections: The Title, the Left, the Middle and the Right.
 * Title
     * The Title is displayed along the top of the page. It consists of the underlined heading 'Skeleton Smasher!' but in a smaller font than the one in the Intro Page. This is purely to display the name of the game to the user.
-//IMG HERE
+
+<img src="README-pictures/main-title.png">
+
 * Left Section 
 * The Left Section is the point of 'secondary interface' for the user. The user's eye should not be immediately drawn to this section because the text is smaller than the Middle Section and there aren't (initially) any visible images. From here the user can buy units and upgrades to automate the process of generating score in the clicker game.
-    //IMG HERE
+    
+    <img src="README-pictures/main-left.png">
+
     * Unit/ Upgrade Buttons
         * The Unit/ Upgrade Buttons are four buttons that the user can click to either (in the case of the Buy Peasant, Buy Soldier or Buy Paladin buttons) automate the clicking process, or allow the amount of score they generate per click to increase (in the case of the Buy Sword Upgrade button).
         * Hovering over the buttons causes them to change background color from black to lavender to reveal the background images which correspond to the type of unit or upgrade available for purchase.
@@ -58,7 +67,9 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
         * The Price Texts display how much Score the user must spend in order to purchase a unit or an upgrade. The starting amount is different for each unit/ upgrade and the factor by which it increases with each subsequent purchase is also different. The Price Text updates after each purpose of that specific unit/ upgrade.
 * Middle Section 
 * The Middle Section is the area where the user's eye should be immediately drawn to because of the large text, responsive button, different colors and skull images.
-    //IMG HERE
+    
+    <img src="README-pictures/main-middle.png">
+
     * Main Button
         * The Main Button is the first point of interaction for the user and the game cannot be properly played unless this is first pressed. Pressing this button increases the Current Score and Total Score statistics in the Right Section by 1 multiplied by the user's current Sword Level statistic. 
         * This must be pushed first as without Current Score the user cannot purchase units or upgrades and units make the incrementation of Current Score possible in order to purchase further units/ upgrades (the purpose of a clicker game).
@@ -68,7 +79,9 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
         * There are two skull images below the button which follow the color scheme of the page but are mostly there for thematic purpose.
 * Right Section
 * The Right Section is the area where the user can be informed about the statistics of the game, such as the amount of units they have purchased etc. It also contains a button to go back to the Intro Page
-    //IMG HERE
+    
+    <img src="README-pictures/main-right.png">
+
     * Current Score
         * The Current Score statistic displays the amount of score the user currently has to spend. It increases when the Main Button is clicked or when the score is incremented every second from purchased units. It decreases when spent on units or upgrades.
     * Total Score
@@ -119,7 +132,7 @@ There are a number of features that if more time was given I would like to add t
 * Balsamiq Wireframes
     * Before beginning the project, I used Balsamiq Wireframes to produce a rough idea of what I wanted the main Skeleton Smasher page to look like. The actual webpage went through many changes and the wireframe looks very different from the actual product but the core features are still present in this image here:
 
-    //IMG HERE
+    <img src="README-pictures/wireframe.png">
 
 ## Technology Used
 * HTML
@@ -169,7 +182,6 @@ There are a number of features that if more time was given I would like to add t
     * I confirmed that the automatic incremental functions for score, total score and Skeletons Smashed per second work as intended and display the correct values.
     * I confirmed that there are limits to the amount of score, total score, units and upgrades such that the numbers never rise to high to cause visual glitching on the webpage across a wide range of devices.
 
-    //IMG HERE
 * Lighthouse Check
     * I confirmed that the Skeleton Smasher Intro and Skeleton Smasher webpages passed the Lighthouse Check in DevTools across both mobile and desktop environments.
 
@@ -181,7 +193,8 @@ There are a number of features that if more time was given I would like to add t
 * Limit Testing
     * I changed the code before completion so that each click would increase the Current Score and Total Score up to 99999999. I then purchased up to 99 of each unit and maxed out the Price Text on each unit/ upgrade. This was to make sure my code prevented numbers rising above 99999999 for Current Score, Total Score or Price Texts and above 99 for units and upgrades. As Skeletons Smashed Per Second is dependent upon all these factors, its max limit is capped at 10989. I tested these limits because although it is unlikely anyone would reach them, should they surpass them enough they would cause visual glitches on the webpage when number texts would become larger than their containers (and other measures such as overflow hiding or scrolling would not look good or work well for the user).
 
-//IMG HERE
+<img src="README-pictures/limit-test.png">
+
 ## Test Cases
 In this section, I discuss what output should be associated with what input when a user accesses either the Intro Page or the Main Game Page.
 ### Intro Page Test Cases
@@ -250,7 +263,7 @@ In this section, I discuss what output should be associated with what input when
     * Output: The user is taken back to the Intro Page.
 ## Bugs
 Here is a list of the more significant bugs I encountered when building Skeleton Smasher.
-* <button> <a> Tag Incompatibility
+* 'button' 'a' Tag Incompatibility
     * Bug: The W3C validator informed me that it is bad practice to mix 'button; and 'a' elements inside one another which I had done up until the point of validation.
     * Fix: In order to correct this, I instead used a 'form' element containing a 'button' element inside it. The form had a method attribute of 'GET' and an action attribute of the intended destination.
 * JSHint Undeclared Variables
@@ -262,6 +275,7 @@ Here is a list of the more significant bugs I encountered when building Skeleton
 * Font Causing Lighthouse Checks to Fail
     * Bug: Lighthouse Checks were failing on both webpages. Worse so on the mobile checks.
     * Fix: After significant trial and error, I found that decreasing the amount of the 'Koulen' font that was imported from Google Fonts seemed to have a positive effect on the Lighthouse Check performance metric. Whereas before most of the text on both webpages was in 'Koulen' it now only occurs on the main buttons on each page.
+
 ## Deployment
 
 ### Gitpod
