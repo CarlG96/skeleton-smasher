@@ -295,6 +295,8 @@ Here is a list of the more significant bugs I encountered when building Skeleton
     * Bug: Lighthouse Checks were failing on both webpages. Worse so on the mobile checks.
     * Fix: After significant trial and error, I found that decreasing the amount of the 'Koulen' font that was imported from Google Fonts seemed to have a positive effect on the Lighthouse Check performance metric. Whereas before most of the text on both webpages was in 'Koulen' it now only occurs on the main buttons on each page.
 
+* Unfixed Bugs:
+    * I do not believe there are any unfixed bugs.
 ## Deployment
 
 ### Gitpod
