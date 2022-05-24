@@ -324,6 +324,7 @@ The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smas
     * For information about clicker games I read this [article](https://www.gamedesigning.org/learn/clicker-games/).
     * I used this [HTML Validator](https://validator.w3.org/) and this [CSS Validator](https://jigsaw.w3.org/css-validator/) to validate my HTML and CSS code.
     * I used [JSHint](https://jshint.com/) to test script.js.
+    * [Am I Responsive?](https://ui.dev/amiresponsive?ref=techygen.com) was used for the second image in this README.
 
 * Media
     * I used [Pixabay](https://pixabay.com/) for the Peasant, Soldier, Paladin, Sword and Skull images.
