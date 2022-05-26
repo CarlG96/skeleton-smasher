@@ -295,8 +295,11 @@ Here is a list of the more significant bugs I encountered when building Skeleton
     * Bug: Lighthouse Checks were failing on both webpages. Worse so on the mobile checks.
     * Fix: After significant trial and error, I found that decreasing the amount of the 'Koulen' font that was imported from Google Fonts seemed to have a positive effect on the Lighthouse Check performance metric. Whereas before most of the text on both webpages was in 'Koulen' it now only occurs on the main buttons on each page.
 
-* Unfixed Bugs:
-    * I do not believe there are any unfixed bugs.
+## Unfixed Bugs:
+* Audio Bugs:
+    * When the user clicks the buttons faster than the sound effects happen a second sound effect will not play out until the first one has fully finished.. This is especially noticeable on the Main Button. The reason this is the case is that the sound effects will play out until they finish and will not reset until that point. As I was using free open source sound effects I had no control over the length of these sound effects and so if I had more resources I would have dramatically decreased the length of time that these sound effects play out for so that someone clicking the buttons quickly would still get audio feedback for every click. As it is the audio bug doesn't massively impact the user so this is a very insignificant bug.
+    
+
 ## Deployment
 
 ### Gitpod
@@ -330,3 +333,4 @@ The link to the published Skeleton Smasher Intro webpage is here: [Skeleton Smas
     * I used [Pixabay](https://pixabay.com/) for the Peasant, Soldier, Paladin, Sword and Skull images.
     * I used [Font Awesome](https://fontawesome.com/) for the skull icons used in the Intro Page.
     * The Font Families I used were from [Google Fonts](https://fonts.google.com/).
+    * I used [zapsplat](https://www.zapsplat.com/) for the sound effects of the Main Button and the Unit/ Upgrade Buttons.
