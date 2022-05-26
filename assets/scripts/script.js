@@ -154,5 +154,5 @@ function skeletonsPerSecond() {
     let peasantNum = parseInt(document.getElementById("peasant-amount").innerHTML);
     let soldierNum = parseInt(document.getElementById("soldier-amount").innerHTML);
     let paladinNum = parseInt(document.getElementById("paladin-amount").innerHTML);
-    smashedPerSecond.innerHTML = ((peasantNum) + (soldierNum) * 10) + (paladinNum * 100);
+    smashedPerSecond.innerHTML = (peasantNum) + (soldierNum * 10) + (paladinNum * 100);
 }

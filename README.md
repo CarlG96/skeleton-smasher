@@ -13,7 +13,7 @@ The Skeleton Smasher website is a website that allows the user to play a simple 
 <img src="README-pictures/intro-page.png">
 
 
-The user is directed to the actual game page and has to click the button and eventually buy units of increasing expense and quality and upgrades for their clicking. The game tracks their score, total score among other statistics and the ver increasing numbers provide a sense of satisfaction to the user even if they are not actually doing anything strenous or challenging.
+The user is directed to the actual game page and has to click the button and eventually buy units of increasing expense and quality and upgrades for their clicking. The game tracks their score and total score among other statistics and the ever increasing numbers provide a sense of satisfaction to the user even if they are not actually doing anything strenous or challenging.
 
  <img src="README-pictures/responsive.png">
 
@@ -25,23 +25,23 @@ The project consists of two webpages which I will refer to as 'Intro Page' and '
 * Title
     * The Title consists of a heading in a large gold font that reads 'Skeleton Smasher!'. This is purely for introductory purposes for the user.
 
-<img src="README-pictures/intro-title.png">
+    <img src="README-pictures/intro-title.png">
 
 * Story Section
     * The Story Section consists of a short paragraph of text in that attempts to give a story context to the clicker game. The paragraph has skull icons placed at the beginning and end of it. This paragraph is purely for setting the tone of the game and is meant to be similar to text introductions that would appear in retro games.
 
-<img src="README-pictures/intro-story-section.png">
+    <img src="README-pictures/intro-story-section.png">
 
 * How to Play Section
     * The How to Play Section consists of a heading with a wavy underline and four lines of text each with skull icons at the beginning and end of them. These lines of text inform the user of how to play the game and this along with the feedback from the highlighting of the buttons in the Main Game Page will allow the user to quickly understand how the game works.
     
-<img src="README-pictures/intro-how-to-play.png">
+    <img src="README-pictures/intro-how-to-play.png">
 
 * Link to Main Page Button
     * The Link to Main Page Button is a button with bold white text in a different font that reads: 'Play Skeleton Smasher!'. This is where the player's eye should be drawn to and this is because it is the most important part of the page (being the link between the Intro Page and the Main Game Page).
     * The background for the button highlights a lavender-like color when hovered over, providing the user with visual feedback that this element can be clicked on.
 
-<img src="README-pictures/intro-link-button.png">
+    <img src="README-pictures/intro-link-button.png">
 
 ### Features of Main Game Page
 
@@ -49,17 +49,17 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
 * Title
     * The Title is displayed along the top of the page. It consists of the underlined heading 'Skeleton Smasher!' but in a smaller font than the one in the Intro Page. This is purely to display the name of the game to the user.
 
-<img src="README-pictures/main-title.png">
+    <img src="README-pictures/main-title.png">
 
-* Left Section 
+#### Left Section 
 * The Left Section is the point of 'secondary interface' for the user. The user's eye should not be immediately drawn to this section because the text is smaller than the Middle Section and there aren't (initially) any visible images. From here the user can buy units and upgrades to automate the process of generating score in the clicker game.
     
     <img src="README-pictures/main-left.png">
 
-    * Unit/ Upgrade Buttons
-        * The Unit/ Upgrade Buttons are four buttons that the user can click to either (in the case of the Buy Peasant, Buy Soldier or Buy Paladin buttons) automate the clicking process, or allow the amount of score they generate per click to increase (in the case of the Buy Sword Upgrade button).
-        * Hovering over the buttons causes them to change background color from black to lavender to reveal the background images which correspond to the type of unit or upgrade available for purchase.
-        * If the player has an amount of score equal to or greater than the price in the Price Text corresponding to that button, the corresponding statistic text in the Right Section will increase by 1, the amount of score the user bought the unit or upgrade with will be subtracted from the Score statistic, the Skeletons Smashed per second statistic will update after 1/60th of a second, the Price Text will update and a victory sound will play.
+* Unit/ Upgrade Buttons
+    * The Unit/ Upgrade Buttons are four buttons that the user can click to either (in the case of the Buy Peasant, Buy Soldier or Buy Paladin buttons) automate the clicking process, or allow the amount of score they generate per click to increase (in the case of the Buy Sword Upgrade button).
+    * Hovering over the buttons causes them to change background color from black to lavender to reveal the background images which correspond to the type of unit or upgrade available for purchase.
+    * If the player has an amount of score equal to or greater than the price in the Price Text corresponding to that button, the corresponding statistic text in the Right Section will increase by 1, the amount of score the user bought the unit or upgrade with will be subtracted from the Score statistic, the Skeletons Smashed per second statistic will update after 1/60th of a second and the Price Text will update and a victory sound will play.
     
     <img src="README-pictures/peasant-button.png">
 
@@ -69,53 +69,53 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
 
     <img src="README-pictures/sword-button.png">
 
-    * Description Texts
-        * The Description Texts are italicised texts explaining a story purpose behind the unit and what amount of score they automate per second. As this information is useful but not critical to the functioning of the game, on smaller screen sizes such as mobile devices this text is removed by media query in order to make the website less cluttered.
-    * Price Texts
-        * The Price Texts display how much Score the user must spend in order to purchase a unit or an upgrade. The starting amount is different for each unit/ upgrade and the factor by which it increases with each subsequent purchase is also different. The Price Text updates after each purpose of that specific unit/ upgrade.
-* Middle Section 
+* Description Texts
+    * The Description Texts are italicised texts explaining a story purpose behind the unit and what amount of score they automate per second. As this information is useful but not critical to the functioning of the game, on smaller screen sizes such as mobile devices this text is removed by media query in order to make the website less cluttered.
+* Price Texts
+    * The Price Texts display how much Score the user must spend in order to purchase a unit or an upgrade. The starting amount is different for each unit/ upgrade and the factor by which it increases with each subsequent purchase is also different. The Price Text updates after each purchase of that specific unit/ upgrade.
+#### Middle Section 
 * The Middle Section is the area where the user's eye should be immediately drawn to because of the large text, responsive button, different colors and skull images.
     
-    <img src="README-pictures/main-middle.png">
+<img src="README-pictures/main-middle.png">
 
-    * Main Button
-        * The Main Button is the first point of interaction for the user and the game cannot be properly played unless this is first pressed. Pressing this button increases the Current Score and Total Score statistics in the Right Section by 1 multiplied by the user's current Sword Level statistic. 
-        * This must be pushed first as without Current Score the user cannot purchase units or upgrades and units make the incrementation of Current Score possible in order to purchase further units/ upgrades (the purpose of a clicker game).
-        * The Main Button consists of a button with a white border and large white text reading 'Click to Smash Skeletons!' which highlights a lavender color when hovered over.
-        * Clicking the Main Button causes a sound to play which is intended to be indicative of a user smashing a skeleton.
-    * Skull Images
-        * There are two skull images below the button which follow the color scheme of the page but are mostly there for thematic purpose.
-* Right Section
+* Main Button
+    * The Main Button is the first point of interaction for the user and the game cannot be properly played unless this is pressed first. Pressing this button increases the Current Score and Total Score statistics in the Right Section by 1 multiplied by the user's current Sword Level statistic. 
+    * This must be pushed first as without Current Score the user cannot purchase units or upgrades and units make the incrementation of Current Score possible in order to purchase further units/ upgrades (the purpose of a clicker game).
+    * The Main Button consists of a button with a white border and large white text reading 'Click to Smash Skeletons!'. This button highlights a lavender color when hovered over.
+    * Clicking the Main Button causes a sound to play which is intended to be indicative of a user smashing a skeleton.
+* Skull Images
+    * There are two skull images below the button which follow the color scheme of the page but are mostly there for thematic purpose.
+#### Right Section
 * The Right Section is the area where the user can be informed about the statistics of the game, such as the amount of units they have purchased etc. It also contains a button to go back to the Intro Page
     
     <img src="README-pictures/main-right.png">
 
-    * Current Score
-        * The Current Score statistic displays the amount of score the user currently has to spend. It increases when the Main Button is clicked or when the score is incremented every second from purchased units. It decreases when spent on units or upgrades.
-    * Total Score
-        * The Total Score statistic displays the amount of score the user has accumulated throughout the entire game. It increases when the Main Button is clicked or when the score is incremented every second from purchased units. It never decreases, unlike the Current Score statistic.
-    * Skeletons Smashed Per Second
-        * The Skeletons Smashed Per Second statistic displays the amount of score that the user generates from purchased units. It is calculated from the statistics of Number of Peasants, Number of Soldiers and Number of Paladins. 
-        * The Skeletons Smashed Per Second statistic is revised every 60th of a second, meaning to the user any changes from units they purchase will seem instantaneous.
-    * Number of Peasants
-        * This statistic represents the amount of Peasant units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 1.
-    * Number of Soldiers
-        * This statistic represents the amount of Soldier units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 10.
-    * Number of Paladins
-        * This statistic represents the amount of Paladin units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 100.
-    * Sword Level
-        * This statistic represents the amount of Sword Upgrades the user has purchased throughout the game. Each upgrade increases the amount of score the player gets from clicking the Main Button by 1.
-    * Back to Intro Button
-        * This button sends the user back to the Intro Page. 
-        * It highlights a lavender color when hovered over to let the user know that it can be interacted with.
-        * As going back to the Intro Page will erase the user's progress on the Main Game Page, the text of the button is small so it is less likely the user will click the button.
+* Current Score
+    * The Current Score statistic displays the amount of score the user currently has to spend. It increases when the Main Button is clicked or when the score is incremented every second from purchased units. It decreases when spent on units or upgrades.
+* Total Score
+    * The Total Score statistic displays the amount of score the user has accumulated throughout the entire game. It increases when the Main Button is clicked or when the score is incremented every second from purchased units. It never decreases, unlike the Current Score statistic.
+* Skeletons Smashed Per Second
+    * The Skeletons Smashed Per Second statistic displays the amount of score that the user generates from purchased units. It is calculated from the statistics of Number of Peasants, Number of Soldiers and Number of Paladins. 
+    * The Skeletons Smashed Per Second statistic is revised every 60th of a second, meaning to the user any changes from units they purchase will seem instantaneous.
+* Number of Peasants
+    * This statistic represents the amount of Peasant units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 1.
+* Number of Soldiers
+    * This statistic represents the amount of Soldier units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 10.
+* Number of Paladins
+    * This statistic represents the amount of Paladin units the user has purchased throughout the game. Each unit increases the Skeletons Smashed Per Second statistic by 100.
+* Sword Level
+    * This statistic represents the amount of Sword Upgrades the user has purchased throughout the game. Each upgrade increases the amount of score the player gets from clicking the Main Button by 1.
+* Back to Intro Button
+    * This button sends the user back to the Intro Page. 
+    * It highlights a lavender color when hovered over to let the user know that it can be interacted with.
+    * As going back to the Intro Page will erase the user's progress on the Main Game Page, the text of the button is small so it is less likely the user will click the button.
 
 ## Future Features
-There are a number of features that if more time was given I would like to add to the Skeleton Smasher game.
+There are a number of features that if I had more time I would like to add to the Skeleton Smasher game.
 * More Unit Types
     * I had intended to add more unit types at the beginning (see the picture of my wireframe in the Wireframes and Prototypes section) however realised that it would go beyond the scope of this project. If I had more time I would like to add more types of units for the user to purchase that could maybe act slightly differently to the current unit types. For example, perhaps there would be a unit which would generate lots of score per second and the first one would be relatively cheap but the factor used on it when calculating its Price Text could be extortionate so the user would only be able to purchase such a unit very rarely and each one would feel like a major milestone.
 * More Upgrade Types
-    * I would have liked to add a few more upgrade types that would also do different things like perhaps increase the amount of score that each Peasant unit produces per second. This would make Peasant units more valuable as the Skeletons Smashed Per Second amount increases as right now they are heavily outshined by the Soldier and Paladin units except for right when the user starts the game.
+    * I would have liked to add a few more upgrade types that would also do different things like perhaps increase the amount of score that each Peasant unit produces per second. This would make Peasant units more valuable as right now they are heavily outshined by the Soldier and Paladin units except for right when the user starts the game.
 * A Hidden Future Unit Type Feature
     * Many clicker games create a sense of curiosity in the player by not revealing all of their unit types at the beginning of the game. Some have icons of the units that are shadowed out until the player generates enought Current Score or Total Score to see them in which case they will become fully visible and the amount needed to purchase them becomes visible as well. I would have liked to do this but such a feature would require a lot of time all by itself and might even be larger than the current project in scope if enough units like this were introduced.
 * Additional Gameplay Features
@@ -128,12 +128,12 @@ There are a number of features that if more time was given I would like to add t
     * The hex values of the colors used in the two webpages are:
         * #000000 for the black color which mostly acts as a background color or to provide contrast to the text.
         * #585757 for the dark grey color which mostly acts as a background color or to provide contrast to the text.
-        * #ffffff for the white color which is used as the font color for the main buttons of both webpages to draw the user's eye to them immediately whilst still providing contrast with the white background. It is also used for the link button on the main page but as that is in the corner and the font-size is smaller than the main button the user's eye is unlikely to be immediately drawn there. It is also used as a border color for the main button.
-        * #ffd700 for the gold color which is used as a font color, for the icons on the intro page and for line breaks and borders on the main page to keep things separated visually.
+        * #ffffff for the white color which is used as the font color for the main buttons of both webpages to draw the user's eye to them immediately whilst still providing contrast with the black background. It is also used for the link button on the main page but as that is in the corner and the font-size is smaller than the main button the user's eye is unlikely to be immediately drawn there. It is also used as a border color for the main button.
+        * #ffd700 for the gold color which is used as a font color for the icons on the intro page and for line breaks and borders on the main page to keep things separated visually.
         * #6e70a1 for the lavender color. This is used as a visual feedback to the user telling them that the element they have their mouse over or have touched is interactive and is used to highlight buttons across the two webpages. It provides contrast with the black backgrounds that the buttons have before being hovered over.
 
 * Fonts
-    * Even though the color scheme was designed to be dark and spooky; I still wanted the website itself to have a somewhat whimsical feel, like an retro game. For this reason I chose the 'Macondo' font to act as the main font across both pages because of its whimsical feel. For the main buttons on each page, however, I used the 'Koulen' font to draw the user's attention immediately.
+    * Even though the color scheme was designed to be dark and spooky; I still wanted the website itself to have a somewhat whimsical feel, like a retro game. For this reason I chose the 'Macondo' font to act as the main font across both pages because of its whimsical feel. For the main buttons on each page, however, I used the 'Koulen' font to draw the user's attention immediately.
     * These fonts were taken from [Google Fonts](https://fonts.google.com/).
 ## Wireframes and Prototypes
 
@@ -149,8 +149,14 @@ There are a number of features that if more time was given I would like to add t
 * CSS 
     * Used to style the website and change the website depending on screen sizes with media queries. Also used to add background images to the unit/ upgrade buttons.
 
+* JavaScript
+    * Used for the logic of the website and to make changes to statistics, price texts, add event listeners, set function intervals etc.
+
 * Balsamiq Wireframes
     * Used for prototyping and making a rough outline of the main game webpage (the intro was not sufficiently complex enough to warrant a wireframe).
+
+* zapsplat 
+    * Used for license free audio effects.
 
 * Font Awesome
     * Scripts and Icons were used to add icons to the Skeleton Smasher Intro page. 
@@ -167,6 +173,7 @@ There are a number of features that if more time was given I would like to add t
 ## Testing
 * HTML Validator
     * When passed through the W3C HTML validator no errors were found on index.html or skeleton-smasher.html files. There were warnings about not using headings for some sections however I have chosen to ignore these warnings as they would negatively affect the look of the website and would only clutter the screenspace on smaller device sizes.
+
 * CSS Validator
     * When passed through the W3C CSS validator no errors were found on skeleton-smasher.css or intro.css.
 
@@ -212,7 +219,7 @@ There are a number of features that if more time was given I would like to add t
 * Limit Testing
     * I changed the code before completion so that each click would increase the Current Score and Total Score up to 99999999. I then purchased up to 99 of each unit and maxed out the Price Text on each unit/ upgrade. This was to make sure my code prevented numbers rising above 99999999 for Current Score, Total Score or Price Texts and above 99 for units and upgrades. As Skeletons Smashed Per Second is dependent upon all these factors, its max limit is capped at 10989. I tested these limits because although it is unlikely anyone would reach them, should they surpass them enough they would cause visual glitches on the webpage when number texts would become larger than their containers (and other measures such as overflow hiding or scrolling would not look good or work well for the user).
 
-<img src="README-pictures/limit-test.png">
+    <img src="README-pictures/limit-test.png">
 
 ## Test Cases
 In this section, I discuss what output should be associated with what input when a user accesses either the Intro Page or the Main Game Page.
@@ -280,10 +287,18 @@ In this section, I discuss what output should be associated with what input when
     * Output: The background of the Back to Intro Button changes from black to lavender.
     * Input: The user clicks on the Back to Intro Button.
     * Output: The user is taken back to the Intro Page.
+* Interval Functions
+    * incrementScore() function
+        * Input: 1 second of time passes.
+        * Output: The function will adjust the Current Score and Total Score by this calculation: (Current Score or Total Score) + (Number of Peasants statistic) + (Number of Soliders statistic * 10) + (Number of Paladins statistic * 10). All the limit checks for Current Score, Total Score and Unit/ Upgrade Numbers apply here.
+    * skeletonsPerSecond() function
+        * Input: One sixtieth of a second passes.
+        * Output: The function will adjust the Skeletons Smashed Per Second statistic with this calculation: (Number of Peasants statistic) + (Number of Soldiers statistic * 10) + (Number of Paladins statistic * 100). There were no limits built into this function as the other limits on the values that make up this statistic limit it to a max of 10989.
+
 ## Bugs
 Here is a list of the more significant bugs I encountered when building Skeleton Smasher.
 * 'button' 'a' Tag Incompatibility
-    * Bug: The W3C validator informed me that it is bad practice to mix 'button; and 'a' elements inside one another which I had done up until the point of validation.
+    * Bug: The W3C validator informed me that it is bad practice to mix 'button' and 'a' elements inside one another which I had done up until the point of validation.
     * Fix: In order to correct this, I instead used a 'form' element containing a 'button' element inside it. The form had a method attribute of 'GET' and an action attribute of the intended destination.
 * JSHint Undeclared Variables
     * Bug: When running script.js through JSHint the first time it was revelealed many of my variables were not defined due to me not using the 'let' keyword. As such the scopes they were in were causing weird glitches in the logic of my program (ie removing a variable from a function did not cause the logic to break because elsewhere there was a variable with the same name outside the function.)
