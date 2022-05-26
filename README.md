@@ -288,10 +288,10 @@ In this section, I discuss what output should be associated with what input when
     * Input: The user clicks on the Back to Intro Button.
     * Output: The user is taken back to the Intro Page.
 * Interval Functions
-    * incrementScore() function
+    * Update to Current Score and Total Score Statistics
         * Input: 1 second of time passes.
         * Output: The function will adjust the Current Score and Total Score by this calculation: (Current Score or Total Score) + (Number of Peasants statistic) + (Number of Soliders statistic * 10) + (Number of Paladins statistic * 10). All the limit checks for Current Score, Total Score and Unit/ Upgrade Numbers apply here.
-    * skeletonsPerSecond() function
+    * Update to Skeletons Smashed Per Second
         * Input: One sixtieth of a second passes.
         * Output: The function will adjust the Skeletons Smashed Per Second statistic with this calculation: (Number of Peasants statistic) + (Number of Soldiers statistic * 10) + (Number of Paladins statistic * 100). There were no limits built into this function as the other limits on the values that make up this statistic limit it to a max of 10989.
 
