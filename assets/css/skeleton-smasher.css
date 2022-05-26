@@ -16,18 +16,20 @@ body {
     background-color: #000000;
     height: 5vh;
     width: 100%;
-    position: relative;
+    position: relative; /* Code from W3schools */
 }
 
 /*Selector for title banner heading*/
-/* Code from W3schools */
+
 .main-heading h1 {
+    /* Start of code from W3schools */
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    /* End of code from W3schools */
     color: #ffd700;
     text-decoration: underline;
     font-size: 150%;
