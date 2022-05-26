@@ -60,14 +60,7 @@ The Main Game Page is split into four distinct sections: The Title, the Left, th
     * The Unit/ Upgrade Buttons are four buttons that the user can click to either (in the case of the Buy Peasant, Buy Soldier or Buy Paladin buttons) automate the clicking process, or allow the amount of score they generate per click to increase (in the case of the Buy Sword Upgrade button).
     * Hovering over the buttons causes them to change background color from black to lavender to reveal the background images which correspond to the type of unit or upgrade available for purchase.
     * If the player has an amount of score equal to or greater than the price in the Price Text corresponding to that button, the corresponding statistic text in the Right Section will increase by 1, the amount of score the user bought the unit or upgrade with will be subtracted from the Score statistic, the Skeletons Smashed per second statistic will update after 1/60th of a second and the Price Text will update and a victory sound will play.
-    
-    <img src="README-pictures/peasant-button.png">
 
-    <img src="README-pictures/soldier-button.png">
-
-    <img src="README-pictures/paladin-button.png">
-
-    <img src="README-pictures/sword-button.png">
 
 * Description Texts
     * The Description Texts are italicised texts explaining a story purpose behind the unit and what amount of score they automate per second. As this information is useful but not critical to the functioning of the game, on smaller screen sizes such as mobile devices this text is removed by media query in order to make the website less cluttered.
@@ -244,6 +237,9 @@ In this section, I discuss what output should be associated with what input when
     * Buy Peasant Button
         * Input: The user hovers over the Buy Peasant Button.
         * Output: The background of the Buy Peasant Button changes from black to lavender and the background image of a peasant is revealed to the user.
+
+        <img src="README-pictures/peasant-button.png">
+
         * Input: The user clicks the Buy Peasant Button and the Current Score statistic is greater than or equal to the Price Text for the Peasant unit.
         * Output: The Number of Peasants statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 1. The Price Text for the Peasant unit is multiplied by 1.5. Audio of a victory sound will play.
         * Input: The user clicks the Buy Peasant Button and the Current Score statistic is greater than or equal to the Price Text for the Peasant unit but the Price Text is 99999999 or will be after being multiplied.
@@ -255,6 +251,9 @@ In this section, I discuss what output should be associated with what input when
     * Buy Soldier Button
         * Input: The user hovers over the Buy Soldier Button.
         * Output: The background of the Buy Soldier Button changes from black to lavender and the background image of a soldier is revealed to the user.
+
+        <img src="README-pictures/soldier-button.png">
+
         * Input: The user clicks the Buy Soldier Button and the Current Score statistic is greater than or equal to the Price Text for the Soldier unit.
         * Output: The Number of Soldiers statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 10. The Price Text for the Soldier unit is multiplied by 1.8. Audio of a victory sound will play.
         * Input: The user clicks the Buy Soldier Button and the Current Score statistic is greater than or equal to the Price Text for the Soldier unit but the Price Text is 99999999 or will be after being multiplied.
@@ -266,6 +265,9 @@ In this section, I discuss what output should be associated with what input when
     * Buy Paladin Button
         * Input: The user hovers over the Buy Paladin Button.
         * Output: The background of the Buy Paladin Button changes from black to lavender and the background image of a paladin is revealed to the user.
+
+        <img src="README-pictures/paladin-button.png">
+
         * Input: The user clicks the Buy Paladin Button and the Current Score statistic is greater than or equal to the Price Text for the Paladin unit.
         * Output: The Number of Paladins statistic is increased by 1. The Skeletons Smashed Per Second statistic is increased by 100. The Price Text for the Paladin unit is multiplied by 2.2. Audio of a victory sound will play.
         * Input: The user clicks the Buy Paladin Button and the Current Score statistic is greater than or equal to the Price Text for the Paladin unit but the Price Text is 99999999 or will be after being multiplied.
@@ -277,6 +279,9 @@ In this section, I discuss what output should be associated with what input when
     * Buy Buy Sword Upgrade Button
         * Input: The user hovers over the Buy Sword Upgrade Button.
         * Output: The background of the Buy Sword Upgrade Button changes from black to lavender and the background image of a sword is revealed to the user.
+
+        <img src="README-pictures/sword-button.png">
+
         * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is greater than or equal to the Price Text for the Sword upgrade.
         * Output: The Sword Level statistic is increased by 1. The Price Text for the Sword upgrade is multiplied by 2. Audio of a victory sound will play.
         * Input: The user clicks the Buy Sword Upgrade Button and the Current Score statistic is greater than or equal to the Price Text for the Sword upgrade but the Price Text is 99999999 or will be after being multiplied.
