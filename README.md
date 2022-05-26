@@ -121,6 +121,9 @@ There are a number of features that if I had more time I would like to add to th
 * Additional Gameplay Features
     * Many clicker games realise that eventually the player will get bored of mindlessly clicking or waiting to purchase their next unit or upgrade and will include minigames to keep the player entertained. As the sky is the limit for these sort of features I decided not to attempt this as it could easily have surpasses the scope of this project in complexity.
 
+* Audio Delay:
+    * When the user clicks the buttons faster than the sound effects happen a second sound effect will not play out until the first one has fully finished. This is especially noticeable on the Main Button. The reason this is the case is that the sound effects will play out until they finish and will not reset until that point. As I was using free open source sound effects I had no control over the length of these sound effects and so if I had more resources I would have dramatically decreased the length of time that these sound effects play out for so that someone clicking the buttons quickly would still get audio feedback for every click. 
+
 ## Typography and Color Scheme
 
 * Color Scheme 
@@ -311,9 +314,7 @@ Here is a list of the more significant bugs I encountered when building Skeleton
     * Fix: After significant trial and error, I found that decreasing the amount of the 'Koulen' font that was imported from Google Fonts seemed to have a positive effect on the Lighthouse Check performance metric. Whereas before most of the text on both webpages was in 'Koulen' it now only occurs on the main buttons on each page.
 
 ## Unfixed Bugs:
-* Audio Bugs:
-    * When the user clicks the buttons faster than the sound effects happen a second sound effect will not play out until the first one has fully finished.. This is especially noticeable on the Main Button. The reason this is the case is that the sound effects will play out until they finish and will not reset until that point. As I was using free open source sound effects I had no control over the length of these sound effects and so if I had more resources I would have dramatically decreased the length of time that these sound effects play out for so that someone clicking the buttons quickly would still get audio feedback for every click. As it is the audio bug doesn't massively impact the user so this is a very insignificant bug.
-    
+To my knowledge there are no unfixed bugs in Skeleton Smasher.
 
 ## Deployment
 
